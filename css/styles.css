@@ -176,6 +176,8 @@ button {
   position: relative;
   width: 100vw;
   min-height: 100vh;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100vh;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;

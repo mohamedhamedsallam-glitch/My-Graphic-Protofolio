@@ -71,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   <img
                     src="${card.image}?v=4k"
                     alt="${card.title}"
-                    loading="${rowIdx < 2 ? "eager" : "lazy"}"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div class="live-card-overlay">
                     <span class="live-card-tag">${slide.categoryLabel}</span>
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 style="--stagger:${lIdx}"
                 aria-label="Zoom ${lg.name}"
               >
-                <img src="${lg.image}?v=mnu4k" alt="${lg.name}" loading="lazy" />
+                <img src="${lg.image}?v=mnu4k" alt="${lg.name}" loading="lazy" decoding="async" />
                 <span class="live-logo-caption">${lg.name}</span>
               </button>`;
           })
@@ -208,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <div class="live-br-logo-wrap">
-                  <img src="${slide.logo}?v=live1" alt="${slide.brandName} Logo" class="live-br-logo-img" loading="lazy" />
+                  <img src="${slide.logo}?v=live1" alt="${slide.brandName} Logo" class="live-br-logo-img" loading="lazy" decoding="async" />
                 </div>
 
                 <div class="live-br-story">
@@ -227,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 role="button"
                 aria-label="Zoom ${slide.title} Brand Board"
               >
-                <img src="${slide.boardImage}?v=live1" alt="${slide.title}" class="live-br-board-img" loading="lazy" />
+                <img src="${slide.boardImage}?v=live1" alt="${slide.title}" class="live-br-board-img" loading="lazy" decoding="async" />
                 <div class="slide-hover-badge">
                   <span>${slide.categoryLabel}</span>
                   <span>⤢ FULL BOARD</span>
