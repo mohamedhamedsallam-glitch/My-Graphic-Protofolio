@@ -1,0 +1,2378 @@
+/* ==========================================================================
+   PORTFOLIO 2026 — MOHAMED HAMED MOHAMED SALLAM
+   Exact Behance Presentation Deck — Pitch Black & Vivid Purple Gradient System
+   ========================================================================== */
+
+:root {
+  --bg-black: #000000;
+  --bg-deep: #07020e;
+  --purple-lilac: #b57ee6;
+  --purple-vivid: #7b22cc;
+  --purple-royal: #5a0ca0;
+  --purple-dark: #3d0075;
+  --purple-glow: #9333ea;
+
+  --bar-gradient: linear-gradient(90deg, #b57ee6 0%, #862fd4 36%, #590a9c 74%, #42007a 100%);
+  --bar-gradient-hover: linear-gradient(90deg, #cb9bf5 0%, #9b43eb 40%, #6d14b8 78%, #520096 100%);
+
+  --text-white: #ffffff;
+  --text-soft: rgba(255, 255, 255, 0.86);
+  --text-muted: rgba(226, 212, 248, 0.58);
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', sans-serif;
+
+  --deck-width: 1180px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Scroll Progress Hairline */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #590a9c, #9b43eb, #d8b4fe);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.9);
+  z-index: 1100;
+  transition: width 0.08s linear;
+}
+
+/* ==========================================================================
+   FLOATING QUICK-JUMP SECTION NAVIGATION DOCK (Top Center Glass Pill)
+   ========================================================================== */
+.top-nav-dock {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 980;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(8, 2, 18, 0.72);
+  border: 1px solid rgba(181, 126, 230, 0.34);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 24px rgba(123, 34, 204, 0.22);
+  opacity: 0.42;
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo), border-color 0.3s ease;
+}
+
+.top-nav-dock:hover,
+.top-nav-dock:focus-within {
+  opacity: 1;
+  border-color: rgba(216, 180, 254, 0.65);
+}
+
+.top-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-chip {
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.74);
+  white-space: nowrap;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.nav-chip:hover {
+  color: #ffffff;
+  background: rgba(181, 126, 230, 0.16);
+}
+
+.nav-chip.active {
+  background: var(--bar-gradient);
+  color: #ffffff;
+  box-shadow: 0 2px 14px rgba(147, 51, 234, 0.6);
+}
+
+.fullscreen-toggle-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(181, 126, 230, 0.14);
+  border: 1px solid rgba(181, 126, 230, 0.35);
+  color: #ffffff;
+  font-size: 0.85rem;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.fullscreen-toggle-btn:hover {
+  background: var(--bar-gradient);
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   FULL-SCREEN CINEMATIC SLIDE PRESENTATION DECK
+   Each slide occupies 100vh on its own with smooth 3D entrance transitions
+   ========================================================================== */
+.behance-deck {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--bg-black);
+  display: flex;
+  flex-direction: column;
+}
+
+.deck-slide {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+  background: var(--bg-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  perspective: 1400px;
+}
+
+/* Inner stage wrapper that animates smoothly when entering/leaving viewport */
+.deck-slide > .slide-media-wrap,
+.deck-slide > .slide-stage-frame,
+.deck-slide > .index-stage,
+.deck-slide > .about-stage,
+.deck-slide > .tools-stage,
+.deck-slide > .hero-live-stage,
+.deck-slide > .live-divider-stage,
+.deck-slide > .live-social-stage,
+.deck-slide > .live-logofolio-stage,
+.deck-slide > .live-branding-stage {
+  opacity: 0.16;
+  transform: translate3d(0, 56px, -60px) scale(0.95);
+  filter: blur(5px) brightness(0.65);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.deck-slide > .index-stage,
+.deck-slide > .about-stage,
+.deck-slide > .tools-stage {
+  width: min(100%, var(--deck-width));
+  margin: 0 auto;
+}
+
+.deck-slide.slide-active > .slide-media-wrap,
+.deck-slide.slide-active > .slide-stage-frame,
+.deck-slide.slide-active > .index-stage,
+.deck-slide.slide-active > .about-stage,
+.deck-slide.slide-active > .tools-stage,
+.deck-slide.slide-active > .hero-live-stage,
+.deck-slide.slide-active > .live-divider-stage,
+.deck-slide.slide-active > .live-social-stage,
+.deck-slide.slide-active > .live-logofolio-stage,
+.deck-slide.slide-active > .live-branding-stage {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0px) brightness(1);
+}
+
+/* Edge-to-edge full screen image frame (100vw x 100vh) */
+.slide-media-wrap,
+.slide-stage-frame {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  overflow: hidden;
+  border: none;
+  box-shadow: none;
+  background: #000000;
+}
+
+.deck-full-img,
+.slide-stage-frame > img {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  object-fit: fill;
+  display: block;
+}
+
+/* ==========================================================================
+   SLIDE 01: LIVE CODED HERO COVER (Giant PORTFOLIO + 2026 + Studio Cutout)
+   ========================================================================== */
+.deck-hero {
+  background:
+    radial-gradient(ellipse 52% 58% at 14% 26%, rgba(168, 85, 247, 0.82) 0%, rgba(107, 33, 168, 0.5) 45%, transparent 76%),
+    radial-gradient(ellipse 54% 60% at 88% 18%, rgba(168, 85, 247, 0.86) 0%, rgba(91, 33, 182, 0.52) 48%, transparent 78%),
+    radial-gradient(ellipse 75% 70% at 50% 60%, rgba(64, 14, 128, 0.72) 0%, #160430 64%, #0d011d 100%);
+}
+
+.hero-live-stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-tl {
+  width: 48vw;
+  height: 48vw;
+  top: -12vw;
+  left: -10vw;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.55) 0%, transparent 70%);
+}
+
+.glow-tr {
+  width: 52vw;
+  height: 52vw;
+  top: -16vw;
+  right: -12vw;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.62) 0%, transparent 70%);
+}
+
+.glow-center {
+  width: 44vw;
+  height: 44vw;
+  bottom: -10vw;
+  left: 28vw;
+  background: radial-gradient(circle, rgba(88, 28, 135, 0.55) 0%, transparent 72%);
+}
+
+.hero-word-layer {
+  position: absolute;
+  top: 7.5vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-giant-word {
+  font-family: 'Anton', var(--font-display);
+  font-weight: 400;
+  font-size: clamp(7rem, 23.2vw, 28rem);
+  line-height: 0.88;
+  letter-spacing: 0.012em;
+  color: #f6f6f8;
+  text-transform: uppercase;
+  text-shadow:
+    0 18px 48px rgba(7, 1, 18, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.35);
+  transform: scaleY(1.12);
+  transform-origin: top center;
+}
+
+.hero-year-layer {
+  position: absolute;
+  top: 63.5vh;
+  left: 11.5vw;
+  right: 11.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.9vw, 5.4rem);
+  color: #ffffff;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.hero-person-layer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 73.5vh;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-person-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 18px 42px rgba(5, 0, 15, 0.72));
+}
+
+.hero-footer-bar {
+  position: absolute;
+  bottom: 6.5vh;
+  left: 6.2vw;
+  right: 6.2vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 5;
+  user-select: text;
+}
+
+.hero-name-block {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.hero-name-bar {
+  width: 5px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #c084fc 0%, #7e22ce 100%);
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.9);
+}
+
+.hero-name-lines h1 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 2.35vw, 2.45rem);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.hero-neon-underline {
+  margin-top: 10px;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, #a855f7 50%, transparent 100%);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.95);
+}
+
+.hero-role-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-role-sep {
+  width: 1.5px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.hero-role-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.55vw, 1.65rem);
+  letter-spacing: 0.19em;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   SLIDE 02: INDEX (Exact Pixel Match to Uploaded Slide 01)
+   ========================================================================== */
+.deck-index {
+  background: #000000;
+  padding: clamp(56px, 8vw, 110px) clamp(28px, 6vw, 76px);
+}
+
+.index-stage {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 84px);
+}
+
+.index-col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.index-word {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(3.6rem, 8.8vw, 7.6rem);
+  letter-spacing: 0.03em;
+  line-height: 0.92;
+  color: #f3f3f3;
+}
+
+.index-bar-under {
+  width: 100%;
+  max-width: 470px;
+  height: clamp(12px, 1.5vw, 18px);
+  margin-top: clamp(14px, 2vw, 24px);
+  background: var(--bar-gradient);
+}
+
+.index-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.4vw, 28px);
+}
+
+.idx-row-link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
+  transition: transform 0.28s var(--ease-out-expo);
+}
+
+.idx-num {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
+  line-height: 1;
+  color: #f4f4f4;
+  min-width: clamp(46px, 6vw, 78px);
+  letter-spacing: 0.02em;
+}
+
+.idx-rect-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 1.3vw, 16px) 24px;
+  background: var(--bar-gradient);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 2.1vw, 1.85rem);
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: all 0.28s var(--ease-out-expo);
+}
+
+.idx-row-link:hover {
+  transform: translateX(8px);
+}
+
+.idx-row-link:hover .idx-rect-bar {
+  background: var(--bar-gradient-hover);
+  box-shadow: 0 0 28px rgba(147, 51, 234, 0.55);
+}
+
+/* ==========================================================================
+   SLIDE 03: WHO AM I ? (Exact Match to Uploaded Slide 02 — Mohamed's Portrait)
+   ========================================================================== */
+.deck-about {
+  background:
+    radial-gradient(ellipse 68% 72% at 68% 95%, rgba(92, 16, 165, 0.78) 0%, rgba(42, 6, 84, 0.48) 46%, transparent 78%),
+    radial-gradient(ellipse 46% 62% at 22% 72%, rgba(68, 12, 128, 0.42) 0%, transparent 70%),
+    #000000;
+  padding: clamp(20px, 2.8vw, 34px) clamp(24px, 5vw, 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-stage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  align-items: center;
+  gap: clamp(22px, 3.6vw, 52px);
+}
+
+.about-portrait-col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: end;
+}
+
+.about-portrait-cut {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 34px rgba(109, 28, 196, 0.36)) contrast(1.03);
+}
+
+.about-text-col {
+  padding: clamp(44px, 7vw, 96px) 0 clamp(32px, 4.5vw, 56px);
+}
+
+.whoami-box {
+  display: inline-block;
+  padding: clamp(6px, 0.85vw, 10px) clamp(14px, 1.8vw, 22px);
+  background: var(--bar-gradient);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(1.65rem, 3.2vw, 2.75rem);
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: clamp(16px, 2vw, 22px);
+}
+
+.whoami-bio {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.92rem, 1.32vw, 1.08rem);
+  line-height: 1.6;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 650px;
+}
+
+/* ==========================================================================
+   SLIDE 03.5: TOOLS & SOFTWARE (Neon Creative Suite Showcase)
+   ========================================================================== */
+.deck-tools {
+  position: relative;
+  background:
+    radial-gradient(ellipse 65% 70% at 18% 20%, rgba(78, 12, 140, 0.34) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 70% at 86% 85%, rgba(92, 16, 165, 0.44) 0%, transparent 68%),
+    #06010f;
+  padding: clamp(44px, 5.5vw, 72px) clamp(20px, 4vw, 48px) clamp(50px, 6vw, 78px);
+  overflow: hidden;
+  border-top: 1px solid rgba(181, 126, 230, 0.14);
+}
+
+.tools-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.6vw, 44px);
+}
+
+.tools-header {
+  display: flex;
+  justify-content: center;
+}
+
+.tools-title-box {
+  display: inline-block;
+  padding: 7px 22px;
+  background: var(--bar-gradient);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  letter-spacing: 0.14em;
+  color: #ffffff;
+}
+
+.tools-row {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+}
+
+.tools-row-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.tools-row-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.tool-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  padding: 4px 6px;
+}
+
+/* Vertical hairline divider between icons just like the reference image */
+.tool-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 1px;
+  height: 78px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.34), transparent);
+}
+
+.tool-tile {
+  width: clamp(58px, 6.2vw, 74px);
+  height: clamp(58px, 6.2vw, 74px);
+  border-radius: 15px;
+  background: var(--bg);
+  border: 2.5px solid var(--glow);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 2.3vw, 2.05rem);
+  letter-spacing: -0.02em;
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--glow) 42%, transparent),
+    inset 0 0 14px color-mix(in srgb, var(--glow) 22%, transparent);
+  transition: transform 0.28s var(--ease-out-expo), box-shadow 0.28s ease;
+}
+
+.tool-item:hover .tool-tile {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--glow) 78%, transparent),
+    inset 0 0 18px color-mix(in srgb, var(--glow) 34%, transparent);
+}
+
+.tool-name {
+  font-family: var(--font-body);
+  font-size: clamp(0.68rem, 0.92vw, 0.84rem);
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.tools-bottom-flare {
+  position: absolute;
+  bottom: -24px;
+  right: -40px;
+  width: 44%;
+  height: 60px;
+  transform: rotate(-6deg);
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.65) 60%, rgba(216, 180, 254, 0.85) 100%);
+  filter: blur(22px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   SOCIAL MEDIA & LOGOFOLIO EXACT SLIDE SHOWCASE
+   ========================================================================== */
+.deck-image-slide {
+  background: #000000;
+}
+
+.deck-social-wrapper,
+.deck-logofolio-wrapper,
+.deck-branding-wrapper {
+  background: #000000;
+}
+
+/* ==========================================================================
+   LIVE CODED SECTION DIVIDERS, SOCIAL 3-CARD GRIDS, LOGOFOLIO & BRANDING
+   ========================================================================== */
+.deck-live-divider {
+  position: relative;
+  background:
+    radial-gradient(ellipse 62% 78% at 22% 52%, rgba(154, 72, 224, 0.78) 0%, rgba(84, 16, 148, 0.56) 44%, #18032e 82%),
+    radial-gradient(ellipse 52% 58% at 78% 88%, rgba(168, 85, 247, 0.68) 0%, transparent 72%),
+    #140228;
+}
+
+.divider-glass-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 78px 118px;
+  mask-image: radial-gradient(ellipse 85% 85% at 35% 50%, #000 30%, transparent 95%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.divider-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.divider-glow-orb.orb-left {
+  width: 46vw;
+  height: 46vw;
+  left: -8vw;
+  top: 12vh;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.52) 0%, transparent 70%);
+}
+
+.divider-glow-orb.orb-bottom {
+  width: 50vw;
+  height: 36vw;
+  right: 4vw;
+  bottom: -12vh;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.58) 0%, transparent 72%);
+}
+
+.divider-glow-orb.orb-center-wave {
+  width: 68vw;
+  height: 44vw;
+  left: 16vw;
+  top: 16vh;
+  transform: rotate(-12deg);
+  background: radial-gradient(ellipse, rgba(216, 180, 254, 0.55) 0%, rgba(126, 34, 206, 0.45) 48%, transparent 76%);
+}
+
+.live-divider-stage {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+}
+
+/* 1. SOCIAL MEDIA Geometric Emblem (SOC/MED | Giant Purple A | L/Square) */
+.sm-emblem {
+  display: inline-flex;
+  align-items: stretch;
+  gap: clamp(10px, 1.4vw, 22px);
+  filter: drop-shadow(0 18px 38px rgba(10, 0, 24, 0.55));
+  user-select: none;
+}
+
+.sm-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 7.2vw, 7.6rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  color: #f5f5f7;
+  text-align: right;
+}
+
+.sm-col-bar {
+  width: clamp(10px, 1.15vw, 18px);
+  background: #f5f5f7;
+  border-radius: 1px;
+}
+
+.sm-col-a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(6.6rem, 15.2vw, 16rem);
+  line-height: 0.82;
+  background: linear-gradient(90deg, #c084fc 0%, #7e22ce 52%, #4c0585 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  margin: 0 -0.05em;
+}
+
+.sm-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.sm-letter-l {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 7.2vw, 7.6rem);
+  line-height: 0.85;
+  color: #f5f5f7;
+}
+
+.sm-white-block {
+  width: 100%;
+  min-width: clamp(38px, 4.6vw, 74px);
+  height: clamp(42px, 5.4vw, 86px);
+  background: #f5f5f7;
+}
+
+/* 2. LOGOFOLIO Geometric Emblem (LOG/FOLI + Giant Purple O) */
+.lg-emblem {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 20px);
+  filter: drop-shadow(0 18px 38px rgba(10, 0, 24, 0.55));
+  user-select: none;
+}
+
+.lg-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.6rem, 8.2vw, 8.8rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  color: #f5f5f7;
+}
+
+.lg-giant-o {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(7.4rem, 17vw, 18.2rem);
+  line-height: 0.8;
+  background: linear-gradient(90deg, #c084fc 0%, #7e22ce 55%, #4c0585 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 3. BRANDING Stacked Emblem (BRAN / DING) */
+.br-emblem {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4.2rem, 9.8vw, 10.6rem);
+  line-height: 0.88;
+  letter-spacing: 0.08em;
+  color: #f5f5f7;
+  filter: drop-shadow(0 18px 38px rgba(10, 0, 24, 0.55));
+  user-select: none;
+}
+
+/* 4. THANK YOU Live Emblem */
+.thankyou-live-stage {
+  padding-bottom: 22vh;
+}
+
+.ty-live-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4.2rem, 10.2vw, 11.2rem);
+  line-height: 0.88;
+  letter-spacing: 0.06em;
+  color: #f5f5f7;
+  filter: drop-shadow(0 18px 42px rgba(10, 0, 24, 0.6));
+  user-select: none;
+}
+
+/* ==========================================================================
+   LIVE SOCIAL MEDIA 3-CARD CAMPAIGN SLIDES
+   ========================================================================== */
+.deck-live-social-slide {
+  position: relative;
+  background:
+    radial-gradient(ellipse 64% 68% at 72% 28%, rgba(108, 22, 184, 0.46) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 62% at 26% 82%, rgba(92, 16, 165, 0.42) 0%, transparent 72%),
+    #04010a;
+}
+
+.live-social-stage {
+  width: min(92vw, 1340px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.live-social-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3.2vw, 48px);
+  align-items: center;
+}
+
+.live-social-card {
+  position: relative;
+  cursor: zoom-in;
+  border-radius: 22px;
+  opacity: 0;
+  transform: translateY(34px) scale(0.95);
+  transition:
+    opacity 0.7s var(--ease-out-expo),
+    transform 0.7s var(--ease-out-expo);
+  transition-delay: calc(var(--stagger, 0) * 0.12s + 0.1s);
+}
+
+.deck-slide.slide-active .live-social-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.live-social-card-frame {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #080212;
+  border: 2.5px solid rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.85),
+    0 0 32px rgba(139, 92, 246, 0.24);
+  transition:
+    transform 0.38s var(--ease-out-expo),
+    border-color 0.3s ease,
+    box-shadow 0.38s var(--ease-out-expo);
+}
+
+.live-social-card:hover .live-social-card-frame,
+.live-social-card:focus-visible .live-social-card-frame {
+  transform: translateY(-10px) scale(1.025);
+  border-color: #d8b4fe;
+  box-shadow:
+    0 32px 75px rgba(0, 0, 0, 0.92),
+    0 0 46px rgba(168, 85, 247, 0.72);
+}
+
+.live-social-card-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s var(--ease-out-expo);
+}
+
+.live-social-card:hover .live-social-card-frame img {
+  transform: scale(1.03);
+}
+
+.live-card-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 28px 16px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(6, 1, 15, 0.92) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.28s var(--ease-out-expo);
+}
+
+.live-social-card:hover .live-card-overlay,
+.live-social-card:focus-visible .live-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.live-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e9d5ff;
+}
+
+.live-card-zoom {
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--bar-gradient);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   LIVE LOGOFOLIO 8-LOGO INTERACTIVE GRID SLIDES
+   ========================================================================== */
+.deck-live-logofolio-slide {
+  position: relative;
+  background:
+    linear-gradient(135deg, #030008 0%, #120224 38%, #2e065e 52%, #0c011a 74%, #020005 100%);
+}
+
+.live-logofolio-streaks {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 24% at 48% 54%, rgba(147, 51, 234, 0.38) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 18% at 62% 72%, rgba(126, 34, 206, 0.32) 0%, transparent 72%);
+  transform: rotate(-28deg) scale(1.25);
+  pointer-events: none;
+}
+
+.live-logofolio-stage {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1360px);
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.live-logofolio-top {
+  display: flex;
+  justify-content: center;
+}
+
+.lg-mini-emblem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.lg-mini-stack {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.2vw, 2.85rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.lg-mini-o {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.4rem, 6.4vw, 5.7rem);
+  line-height: 0.8;
+  background: linear-gradient(90deg, #c084fc 0%, #7e22ce 55%, #4c0585 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.live-logofolio-grid {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: clamp(16px, 2.2vw, 32px);
+  align-items: center;
+  justify-items: center;
+  padding: 16px 0;
+}
+
+.live-logofolio-grid.cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+.live-logo-cell {
+  width: 100%;
+  height: 100%;
+  max-height: 31vh;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(181, 126, 230, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: zoom-in;
+  transition: all 0.34s var(--ease-out-expo);
+}
+
+.live-logo-cell:hover {
+  background: rgba(147, 51, 234, 0.14);
+  border-color: rgba(216, 180, 254, 0.55);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 32px rgba(147, 51, 234, 0.35);
+}
+
+.live-logo-cell img {
+  max-width: 86%;
+  max-height: 76%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.6));
+  transition: transform 0.34s var(--ease-out-expo);
+}
+
+.live-logo-cell:hover img {
+  transform: scale(1.07);
+}
+
+.live-logo-caption {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(233, 213, 255, 0.75);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+}
+
+.live-logo-cell:hover .live-logo-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   LIVE BRANDING CASE STUDY SLIDES (Left Live Story + Right 4K Bento Board)
+   ========================================================================== */
+.deck-live-branding-slide {
+  position: relative;
+  background:
+    radial-gradient(ellipse 55% 65% at 24% 88%, rgba(109, 28, 196, 0.52) 0%, rgba(46, 7, 92, 0.35) 52%, transparent 78%),
+    #030008;
+}
+
+.live-branding-stage {
+  position: relative;
+  z-index: 2;
+  width: min(94vw, 1440px);
+  height: 88vh;
+  display: grid;
+  grid-template-columns: 0.68fr 1.32fr;
+  gap: clamp(28px, 3.8vw, 58px);
+  align-items: stretch;
+}
+
+.live-branding-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.live-br-heading {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 4.4vw, 4.3rem);
+  line-height: 0.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  user-select: none;
+}
+
+.live-br-logo-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 0;
+}
+
+.live-br-logo-img {
+  max-width: min(100%, 360px);
+  max-height: 24vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 28px rgba(147, 51, 234, 0.3));
+}
+
+.live-br-story {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.live-br-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.86rem, 1.12vw, 1.04rem);
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+}
+
+.live-br-desc strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.live-br-swatches {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.live-brand-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.88);
+  transition: all 0.22s ease;
+}
+
+.live-brand-swatch::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--swatch);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.live-brand-swatch:hover {
+  background: rgba(147, 51, 234, 0.28);
+  border-color: #d8b4fe;
+  transform: translateY(-2px);
+}
+
+.live-branding-right {
+  position: relative;
+  height: 100%;
+  max-height: 88vh;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #070210;
+  border: 1px solid rgba(181, 126, 230, 0.28);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(123, 34, 204, 0.24);
+  cursor: zoom-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.38s var(--ease-out-expo), border-color 0.3s ease;
+}
+
+.live-branding-right:hover {
+  transform: scale(1.012);
+  border-color: rgba(216, 180, 254, 0.72);
+}
+
+.live-br-board-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.live-branding-right:hover .slide-hover-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.interactive-slide-item {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Staggered 3D entrance of the 3 post cards when a social slide becomes active */
+.post-card-hotspot {
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+}
+
+.deck-slide.slide-active .post-card-hotspot:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.12s;
+}
+
+.deck-slide.slide-active .post-card-hotspot:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.22s;
+}
+
+.deck-slide.slide-active .post-card-hotspot:nth-of-type(3) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.32s;
+}
+
+.interactive-slide-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.55s var(--ease-out-expo), filter 0.35s ease;
+}
+
+.interactive-slide-item:hover img {
+  transform: scale(1.012);
+}
+
+.interactive-slide-item.has-post-hotspots:hover img {
+  transform: none;
+}
+
+/* Individual Social Media Card Hotspots inside each 3-up slide */
+.post-card-hotspot {
+  position: absolute;
+  border-radius: 16px;
+  cursor: zoom-in;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 14px;
+  background: transparent;
+  border: 2px solid transparent;
+  transition:
+    border-color 0.25s var(--ease-out-expo),
+    box-shadow 0.25s var(--ease-out-expo),
+    background-color 0.25s ease,
+    transform 0.25s var(--ease-out-expo);
+}
+
+.post-card-hotspot:hover,
+.post-card-hotspot:focus-visible {
+  border-color: rgba(216, 180, 254, 0.95);
+  background: radial-gradient(circle at center, rgba(147, 51, 234, 0.12) 0%, rgba(8, 2, 16, 0.28) 100%);
+  box-shadow:
+    0 0 28px rgba(168, 85, 247, 0.65),
+    inset 0 0 18px rgba(168, 85, 247, 0.28);
+  outline: none;
+}
+
+.post-hotspot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(8, 2, 16, 0.88);
+  border: 1px solid rgba(216, 180, 254, 0.65);
+  backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transition: all 0.24s var(--ease-out-expo);
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.post-card-hotspot:hover .post-hotspot-badge,
+.post-card-hotspot:focus-visible .post-hotspot-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.slide-hover-badge {
+  position: absolute;
+  bottom: 18px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(8, 2, 16, 0.82);
+  border: 1px solid rgba(181, 126, 230, 0.45);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.28s var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.interactive-slide-item:hover .slide-hover-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   BRANDING DIVIDER (Matching Glass-Grid Violet Texture from Uploaded Dividers)
+   ========================================================================== */
+.deck-branding-divider {
+  min-height: clamp(320px, 44vw, 520px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 60% 85% at 22% 55%, rgba(164, 96, 232, 0.75) 0%, rgba(78, 12, 140, 0.55) 45%, #160229 85%),
+    radial-gradient(ellipse 55% 60% at 78% 85%, rgba(154, 72, 224, 0.65) 0%, transparent 70%),
+    #140226;
+}
+
+.glass-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 74px 110px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, #000 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.branding-divider-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.branding-title-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 9.2vw, 7.6rem);
+  line-height: 0.9;
+  color: #f4f4f4;
+  text-shadow: 0 10px 36px rgba(10, 0, 24, 0.5);
+}
+
+.bt-solid {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.bt-light {
+  font-weight: 300;
+  letter-spacing: 0.22em;
+}
+
+/* ==========================================================================
+   BRANDING CASE STUDIES (2-Column Editorial Brand Boards)
+   ========================================================================== */
+.brand-slide {
+  position: relative;
+  padding: clamp(48px, 6vw, 78px) clamp(22px, 4.5vw, 56px) 18px;
+  background: #000000;
+  overflow: hidden;
+  border-top: 1px solid rgba(181, 126, 230, 0.12);
+}
+
+.brand-ambient {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  bottom: -220px;
+  left: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(123, 34, 204, 0.34) 0%, transparent 70%);
+  filter: blur(85px);
+  pointer-events: none;
+}
+
+.brand-layout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 40px;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.brand-proj-tag {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--purple-lilac);
+}
+
+.brand-proj-tag strong {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.brand-identity-mark {
+  margin: 26px 0;
+}
+
+.brand-mark-svg {
+  margin-bottom: 12px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-mark-svg svg {
+  height: 44px;
+  width: auto;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.brand-category {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.brand-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.brand-swatches-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.swatch-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.swatch-dot:hover {
+  transform: scale(1.2);
+}
+
+.brand-cta-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--bar-gradient);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.brand-cta-btn:hover {
+  background: var(--bar-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123, 34, 204, 0.5);
+}
+
+/* Bento Brand Collage Board */
+.brand-board {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 165px 145px 150px;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-out-expo), border-color 0.3s ease;
+}
+
+.brand-board:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181, 126, 230, 0.55);
+}
+
+.bento-tile {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.bento-hero { grid-column: 1 / -1; grid-row: 1; }
+.bento-type { grid-column: 1 / 7; grid-row: 2; align-items: flex-start; justify-content: space-between; padding: 16px 18px; }
+.bento-palette { grid-column: 7 / 13; grid-row: 2; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
+.bento-mock-1 { grid-column: 1 / 7; grid-row: 3; }
+.bento-mock-2 { grid-column: 7 / 13; grid-row: 3; }
+
+.palette-bar {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.mini-card-stack {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transform: rotate(-4deg);
+}
+
+.mini-bizcard {
+  width: 106px;
+  height: 62px;
+  border-radius: 6px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+}
+
+.mini-packaging {
+  width: 90px;
+  height: 110px;
+  border-radius: 8px 8px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38);
+  position: relative;
+}
+
+.mini-packaging::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.mini-phone {
+  width: 74px;
+  height: 118px;
+  border-radius: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  padding: 9px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mini-phone-notch {
+  width: 22px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Signature Slide Footer */
+.slide-footer {
+  width: min(100%, 960px);
+  padding: 14px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.sf-left,
+.sf-right {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+
+.sf-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(216, 180, 254, 0.7), rgba(255, 255, 255, 0.25));
+}
+
+/* ==========================================================================
+   FINAL THANK YOU SLIDE (Full-Screen 100vh Image + Floating Glass Contact Bar)
+   ========================================================================== */
+.deck-contact-slide {
+  position: relative;
+  justify-content: center;
+  padding: 0;
+}
+
+.deck-contact-slide > .slide-media-wrap {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.deck-contact-slide .deck-full-img {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.contact-strip {
+  position: absolute;
+  bottom: clamp(16px, 3vh, 30px);
+  left: 50%;
+  transform: translateX(-50%) translateY(36px);
+  width: min(92vw, 980px);
+  height: auto;
+  background: linear-gradient(180deg, rgba(16, 3, 34, 0.78) 0%, rgba(5, 1, 12, 0.92) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(216, 180, 254, 0.34);
+  border-radius: 24px;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(123, 34, 204, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  padding: clamp(18px, 2.5vh, 26px) clamp(20px, 3.5vw, 44px) clamp(12px, 1.8vh, 18px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+  opacity: 0;
+  transition:
+    opacity 0.85s var(--ease-out-expo) 0.12s,
+    transform 0.85s var(--ease-out-expo) 0.12s;
+}
+
+.deck-contact-slide.slide-active .contact-strip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.contact-strip .ty-actions {
+  margin-top: 0;
+}
+
+.contact-strip .ty-socials {
+  margin-top: 14px;
+}
+
+.thankyou-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(85px);
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  background: radial-gradient(circle, rgba(216, 180, 254, 0.52) 0%, rgba(147, 51, 234, 0.45) 45%, transparent 72%);
+}
+
+.orb-2 {
+  width: 440px;
+  height: 440px;
+  top: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.48) 0%, transparent 70%);
+}
+
+.thankyou-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 96px 16px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.ty-top-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  padding: 6px 16px;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.ty-heading {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(3.8rem, 10vw, 7.6rem);
+  line-height: 0.9;
+  letter-spacing: 0.14em;
+  color: #fff;
+  text-shadow: 0 14px 44px rgba(10, 0, 24, 0.5);
+}
+
+.ty-heading span:first-child {
+  font-weight: 800;
+}
+
+.ty-sub {
+  margin-top: 22px;
+  max-width: 460px;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.ty-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ty-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: rgba(6, 1, 14, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.24s ease;
+}
+
+.ty-primary-btn:hover {
+  background: #fff;
+  color: #16032c;
+}
+
+.copy-hint {
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(147, 51, 234, 0.48);
+  color: #fff;
+}
+
+.ty-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #fff;
+  transition: all 0.24s ease;
+}
+
+.ty-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.ty-socials {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(6, 1, 14, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.24s ease;
+}
+
+.social-pill:hover {
+  background: var(--bar-gradient);
+  border-color: var(--purple-lilac);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   MODALS (Full-Slide Lightbox & Brand Detail Viewer)
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-slide-dialog {
+  position: relative;
+  width: min(94vw, 1140px);
+  background: #090312;
+  border: 1px solid rgba(181, 126, 230, 0.38);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-slide-media {
+  width: 100%;
+  min-height: min(62vh, 520px);
+  padding: 20px;
+  background: radial-gradient(circle at center, rgba(90, 12, 160, 0.24) 0%, #000000 72%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-slide-media img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-slide-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #0a0314;
+  border-top: 1px solid rgba(181, 126, 230, 0.22);
+}
+
+.lb-category {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--purple-lilac);
+  margin-bottom: 4px;
+}
+
+.lb-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.lb-counter {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  font-size: 1.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: var(--purple-vivid);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(8, 2, 16, 0.82);
+  border: 1px solid rgba(181, 126, 230, 0.45);
+  font-size: 1.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: var(--purple-vivid);
+}
+
+.lightbox-prev { left: 14px; }
+.lightbox-next { right: 14px; }
+
+/* Detail Modal (Branding) */
+.detail-dialog {
+  position: relative;
+  width: min(94vw, 760px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0a0314;
+  border: 1px solid rgba(181, 126, 230, 0.38);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.lb-desc {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.tools-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.palette-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin: 14px 0 22px;
+}
+
+.palette-chip-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  cursor: pointer;
+}
+
+.palette-chip-color { height: 64px; }
+
+.palette-chip-meta {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 9px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.lb-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lb-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(123, 34, 204, 0.25);
+  border: 1px solid rgba(181, 126, 230, 0.35);
+  color: var(--purple-lilac);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--bar-gradient);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1500;
+  transition: all 0.28s var(--ease-out-expo);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   FLOATING SLIDE HUD (Slide Counter & Up/Down Controls)
+   ========================================================================== */
+.slide-hud {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 960;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 8px;
+  border-radius: 999px;
+  background: rgba(10, 3, 20, 0.84);
+  border: 1px solid rgba(181, 126, 230, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8), 0 0 24px rgba(123, 34, 204, 0.3);
+}
+
+.hud-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(181, 126, 230, 0.14);
+  border: 1px solid rgba(181, 126, 230, 0.35);
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.22s var(--ease-out-expo);
+}
+
+.hud-nav-btn:hover:not(:disabled) {
+  background: var(--bar-gradient);
+  border-color: #d8b4fe;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.75);
+}
+
+.hud-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.hud-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  color: #ffffff;
+  padding: 4px 0;
+}
+
+.hud-sep {
+  font-size: 0.6rem;
+  color: var(--purple-lilac);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 900px) {
+  .top-nav-dock {
+    max-width: 94vw;
+    overflow-x: auto;
+    opacity: 0.88;
+  }
+
+  .index-stage,
+  .about-stage,
+  .brand-layout,
+  .live-branding-stage {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .live-social-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .live-logofolio-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .hero-person-layer {
+    height: 62vh;
+  }
+
+  .about-stage {
+    padding-bottom: 12px;
+  }
+
+  .about-portrait-col {
+    order: 2;
+  }
+
+  .about-text-col {
+    order: 1;
+    padding-bottom: 0;
+  }
+
+  .tools-row-8,
+  .tools-row-9 {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 24px;
+  }
+
+  .tool-item::after {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .tools-row-8,
+  .tools-row-9 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brand-board {
+    grid-template-rows: 135px 115px 96px 130px 130px;
+  }
+
+  .bento-type,
+  .bento-palette,
+  .bento-mock-1,
+  .bento-mock-2 {
+    grid-column: 1 / -1;
+  }
+
+  .bento-type { grid-row: 2; }
+  .bento-palette { grid-row: 3; }
+  .bento-mock-1 { grid-row: 4; }
+  .bento-mock-2 { grid-row: 5; }
+}
