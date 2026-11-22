@@ -127,7 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.innerHTML = data.logofolioSlides
       .map((slide, sIdx) => {
-        const cols = (slide.logos && slide.logos.length > 8) ? 5 : 4;
+        const count = slide.logos ? slide.logos.length : 0;
+        const cols = count > 10 ? 6 : count > 8 ? 5 : 4;
         const logosHtml = (slide.logos || [])
           .map((lg, lIdx) => {
             const globalIdx = runningLogoIdx++;
@@ -139,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 style="--stagger:${lIdx}"
                 aria-label="Zoom ${lg.name}"
               >
-                <img src="${lg.image}?v=mnu4k" alt="${lg.name}" loading="lazy" decoding="async" />
+                <img src="${lg.image}?v=mnu11" alt="${lg.name}" loading="lazy" decoding="async" />
                 <span class="live-logo-caption">${lg.name}</span>
               </button>`;
           })
