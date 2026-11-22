@@ -1,0 +1,538 @@
+/* ==========================================================================
+   PORTFOLIO 2026 DATA — MOHAMED HAMED MOHAMED SALLAM
+   Update bio, contact links, slides, or brand case studies anytime here.
+   ========================================================================== */
+
+window.PORTFOLIO_DATA = {
+  profile: {
+    name: "Mohamed Hamed Mohamed Sallam",
+    bio: "Hello, I'm Mohamed Hamed Mohamed Sallam, a passionate Graphic Designer with over 4 years of experience in creating impactful brand identities and engaging social media designs. I believe that great design is more than just visuals — it's about telling a story, delivering a message, and creating a strong connection between brands and their audience. My goal is to transform ideas into meaningful visual experiences that help brands stand out and grow. I'd be happy to collaborate and bring your vision to life.",
+    email: "mohamedhamedsallam14@gmail.com",
+    phone: "01065401273",
+    phoneHref: "tel:+201065401273",
+    socials: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/mohamed-hamed-sallam-87a15b3a0" },
+      { label: "GitHub", url: "https://github.com/mohamedhamedsallam-glitch" },
+      { label: "WhatsApp", url: "https://wa.me/201065401273" }
+    ]
+  },
+
+  /* All 9 Exact Social Media Campaign Slides (27 Individual Clickable Designs) */
+  socialSlides: [
+    {
+      id: "sm-01",
+      category: "agency",
+      categoryLabel: "Agency & Digital",
+      title: "MDF — Graphic Design, Ads Management & Web Development",
+      image: "assets/slides/social-row-01.webp",
+      cards: [
+        {
+          id: "sm-01-1",
+          title: "MDF — Graphic Design & Visual Identity",
+          image: "assets/slides/posts/sm-01-1.webp",
+          box: { left: 10.45, top: 22.98, width: 24.8, height: 69.37 }
+        },
+        {
+          id: "sm-01-2",
+          title: "MDF — Ads Management Campaign",
+          image: "assets/slides/posts/sm-01-2.webp",
+          box: { left: 39.36, top: 22.98, width: 24.8, height: 69.37 }
+        },
+        {
+          id: "sm-01-3",
+          title: "MDF — Web Development Showcase",
+          image: "assets/slides/posts/sm-01-3.webp",
+          box: { left: 68.26, top: 22.98, width: 24.71, height: 69.37 }
+        }
+      ]
+    },
+    {
+      id: "sm-02",
+      category: "agency",
+      categoryLabel: "Agency & Growth",
+      title: "MDF — 100M+ Organic Views, Premium Quality & Zero Risk",
+      image: "assets/slides/social-row-02.webp",
+      cards: [
+        {
+          id: "sm-02-1",
+          title: "MDF — 100M+ Organic Views Generated",
+          image: "assets/slides/posts/sm-02-1.webp",
+          box: { left: 9.77, top: 16.99, width: 24.9, height: 69.28 }
+        },
+        {
+          id: "sm-02-2",
+          title: "MDF — Premium Quality at an Affordable Price",
+          image: "assets/slides/posts/sm-02-2.webp",
+          box: { left: 38.87, top: 16.99, width: 24.9, height: 69.28 }
+        },
+        {
+          id: "sm-02-3",
+          title: "MDF — Zero Risk 100% Money-Back Guarantee",
+          image: "assets/slides/posts/sm-02-3.webp",
+          box: { left: 67.87, top: 16.99, width: 24.9, height: 69.28 }
+        }
+      ]
+    },
+    {
+      id: "sm-03",
+      category: "agency",
+      categoryLabel: "AI & Performance Marketing",
+      title: "Claude & Meta Ads — Arabic Performance Carousel",
+      image: "assets/slides/social-row-03.webp",
+      cards: [
+        {
+          id: "sm-03-1",
+          title: "Claude AI — Copywriter & Media Buyer Assistant",
+          image: "assets/slides/posts/sm-03-1.webp",
+          box: { left: 9.67, top: 12.09, width: 23.93, height: 72.75 }
+        },
+        {
+          id: "sm-03-2",
+          title: "Claude x Meta Ads — Performance Integration",
+          image: "assets/slides/posts/sm-03-2.webp",
+          box: { left: 37.6, top: 12.09, width: 24.02, height: 72.75 }
+        },
+        {
+          id: "sm-03-3",
+          title: "Claude AI — Data & Campaign Analytics",
+          image: "assets/slides/posts/sm-03-3.webp",
+          box: { left: 65.53, top: 12.09, width: 24.02, height: 72.75 }
+        }
+      ]
+    },
+    {
+      id: "sm-04",
+      category: "lifestyle",
+      categoryLabel: "Menswear Fashion",
+      title: "PUNTO — New Branch, Eid Mubarak & We Are Hiring",
+      image: "assets/slides/social-row-04.webp",
+      cards: [
+        {
+          id: "sm-04-1",
+          title: "PUNTO — New Branch Is Coming Soon",
+          image: "assets/slides/posts/sm-04-1.webp",
+          box: { left: 7.52, top: 9.15, width: 25.78, height: 75.51 }
+        },
+        {
+          id: "sm-04-2",
+          title: "PUNTO — Eid Al-Fitr Mubarak Greeting",
+          image: "assets/slides/posts/sm-04-2.webp",
+          box: { left: 37.6, top: 9.15, width: 25.88, height: 75.51 }
+        },
+        {
+          id: "sm-04-3",
+          title: "PUNTO — We Are Hiring Campaign",
+          image: "assets/slides/posts/sm-04-3.webp",
+          box: { left: 67.68, top: 9.15, width: 25.88, height: 75.51 }
+        }
+      ]
+    },
+    {
+      id: "sm-05",
+      category: "agency",
+      categoryLabel: "Digital Marketing",
+      title: "MDAHH Digital Marketing — High Production & Brand Campaign",
+      image: "assets/slides/social-row-05.webp",
+      cards: [
+        {
+          id: "sm-05-1",
+          title: "MDAHH — High Production Level",
+          image: "assets/slides/posts/sm-05-1.webp",
+          box: { left: 9.08, top: 10.91, width: 25.49, height: 74.09 }
+        },
+        {
+          id: "sm-05-2",
+          title: "MDAHH — Cinematic Ad Production",
+          image: "assets/slides/posts/sm-05-2.webp",
+          box: { left: 38.87, top: 10.91, width: 25.49, height: 74.09 }
+        },
+        {
+          id: "sm-05-3",
+          title: "MDAHH — Strong Brand Quality",
+          image: "assets/slides/posts/sm-05-3.webp",
+          box: { left: 68.65, top: 10.91, width: 25.49, height: 74.09 }
+        }
+      ]
+    },
+    {
+      id: "sm-06",
+      category: "lifestyle",
+      categoryLabel: "Beauty & Cosmetics",
+      title: "Berry Beauty — Dubai Luxury Cosmetics Campaign",
+      image: "assets/slides/social-row-06.webp",
+      cards: [
+        {
+          id: "sm-06-1",
+          title: "Berry Beauty — Define Your Power, Choose Your Color",
+          image: "assets/slides/posts/sm-06-1.webp",
+          box: { left: 9.38, top: 14.45, width: 25.39, height: 74.31 }
+        },
+        {
+          id: "sm-06-2",
+          title: "Berry Beauty — Princess Glow & Softness",
+          image: "assets/slides/posts/sm-06-2.webp",
+          box: { left: 39.06, top: 14.45, width: 25.39, height: 74.31 }
+        },
+        {
+          id: "sm-06-3",
+          title: "Berry Beauty — All-Day Morning Elegance",
+          image: "assets/slides/posts/sm-06-3.webp",
+          box: { left: 68.65, top: 14.45, width: 25.39, height: 74.31 }
+        }
+      ]
+    },
+    {
+      id: "sm-07",
+      category: "business",
+      categoryLabel: "Business Setup — Dubai",
+      title: "Startup Scene — Business & Restaurant Setup in Dubai",
+      image: "assets/slides/social-row-07.webp",
+      cards: [
+        {
+          id: "sm-07-1",
+          title: "Startup Scene — Open Your Restaurant in Dubai",
+          image: "assets/slides/posts/sm-07-1.webp",
+          box: { left: 8.11, top: 7.54, width: 25.49, height: 79.32 }
+        },
+        {
+          id: "sm-07-2",
+          title: "Startup Scene — Expand Your Business in Dubai from Egypt",
+          image: "assets/slides/posts/sm-07-2.webp",
+          box: { left: 37.89, top: 7.54, width: 25.49, height: 79.32 }
+        },
+        {
+          id: "sm-07-3",
+          title: "Startup Scene — Invest in Dubai, Choose Success",
+          image: "assets/slides/posts/sm-07-3.webp",
+          box: { left: 67.68, top: 7.54, width: 25.49, height: 79.32 }
+        }
+      ]
+    },
+    {
+      id: "sm-08",
+      category: "business",
+      categoryLabel: "Investment & Corporate",
+      title: "KE — Shortcut to Global Success & Invest in Dubai",
+      image: "assets/slides/social-row-08.webp",
+      cards: [
+        {
+          id: "sm-08-1",
+          title: "KE — Your Shortcut to Global Success",
+          image: "assets/slides/posts/sm-08-1.webp",
+          box: { left: 10.94, top: 13.67, width: 24.8, height: 75.78 }
+        },
+        {
+          id: "sm-08-2",
+          title: "KE — Unlock Tomorrow Today",
+          image: "assets/slides/posts/sm-08-2.webp",
+          box: { left: 39.84, top: 13.67, width: 24.8, height: 75.78 }
+        },
+        {
+          id: "sm-08-3",
+          title: "KE — Invest in Dubai, Invest in Growth",
+          image: "assets/slides/posts/sm-08-3.webp",
+          box: { left: 68.75, top: 13.67, width: 24.8, height: 75.78 }
+        }
+      ]
+    },
+    {
+      id: "sm-09",
+      category: "business",
+      categoryLabel: "Logistics & Delivery",
+      title: "Reach — 8 Years Delivery & Express Shipping Campaign",
+      image: "assets/slides/social-row-09.webp",
+      cards: [
+        {
+          id: "sm-09-1",
+          title: "Reach — We Deliver to You Even at the Beach",
+          image: "assets/slides/posts/sm-09-1.webp",
+          box: { left: 7.13, top: 11.16, width: 26.17, height: 73.09 }
+        },
+        {
+          id: "sm-09-2",
+          title: "Reach — 8 Years of Shipping & Still Going Strong",
+          image: "assets/slides/posts/sm-09-2.webp",
+          box: { left: 37.7, top: 11.16, width: 26.07, height: 73.09 }
+        },
+        {
+          id: "sm-09-3",
+          title: "Reach — Delivering Your Shipment Under Any Circumstances",
+          image: "assets/slides/posts/sm-09-3.webp",
+          box: { left: 68.16, top: 11.16, width: 26.07, height: 73.09 }
+        }
+      ]
+    }
+  ],
+
+  /* Logofolio Collections — MNU Page + Collection 01 + Collection 02 */
+  logofolioSlides: [
+    {
+      id: "lg-mnu",
+      categoryLabel: "Logofolio — Mansoura National University (MNU)",
+      title: "لوجوهات جامعة المنصورة الأهلية وكلياتها",
+      logos: [
+        { id: "mnu-01", name: "لوجو الجامعة بالاسم جمبه", image: "assets/slides/logos/mnu-logo-with-name.webp" },
+        { id: "mnu-02", name: "لوجو الجامعة", image: "assets/slides/logos/mnu-logo-seal.webp" },
+        { id: "mnu-03", name: "كلية الطب البشري", image: "assets/MNU/كلية  الطب البشري.png" },
+        { id: "mnu-04", name: "كلية طب الاسنان", image: "assets/MNU/كلية طب الاسنان.png" },
+        { id: "mnu-05", name: "كلية الصيدلة", image: "assets/MNU/كلية الصيدلة.png" },
+        { id: "mnu-06", name: "كلية العلاج الطبيعي", image: "assets/MNU/كلية العلاج الطبيعي.png" },
+        { id: "mnu-07", name: "كلية الهندسة", image: "assets/MNU/كلية الهندسة.png" },
+        { id: "mnu-08", name: "كلية التمريض", image: "assets/MNU/كلية  التمريض.png" },
+        { id: "mnu-09", name: "كلية العلوم الصحية", image: "assets/MNU/كلية  العلوم الصحية.png" },
+        { id: "mnu-10", name: "كلية الاقتصاد والعلوم الادارية", image: "assets/MNU/كلية  الاقتصاد والعلوم الادارية.png" },
+        { id: "mnu-11", name: "كلية الاداب والعلوم الانسانية", image: "assets/MNU/كلية الاداب والعلوم الانسانية.png" }
+      ]
+    },
+    {
+      id: "lg-01",
+      categoryLabel: "Logofolio — Collection 01",
+      title: "LADANZA, Eco Tree, USHB Pharmacy, MDAHH, Aseel, Natura Glow, Unlimited & MYSL",
+      logos: [
+        { id: "logo-01", name: "LADANZA Beauty Center", image: "assets/slides/logos/logo-01.webp" },
+        { id: "logo-02", name: "Botanical Minimal Mark", image: "assets/slides/logos/logo-02.webp" },
+        { id: "logo-03", name: "USHB Pharmacy — صيدلية عشب", image: "assets/slides/logos/logo-03.webp" },
+        { id: "logo-04", name: "MDAHH Digital Marketing", image: "assets/slides/logos/logo-04.webp" },
+        { id: "logo-05", name: "Aseel — أصيل", image: "assets/slides/logos/logo-05.webp" },
+        { id: "logo-06", name: "NATURA GLOW", image: "assets/slides/logos/logo-06.webp" },
+        { id: "logo-07", name: "Unlimited Sportswear", image: "assets/slides/logos/logo-07.webp" },
+        { id: "logo-08", name: "MYSL — MYSports League", image: "assets/slides/logos/logo-08.webp" }
+      ]
+    },
+    {
+      id: "lg-02",
+      categoryLabel: "Logofolio — Collection 02",
+      title: "KYU, Soma's Food, Al-Tablia, BOOM, Mosques Care, Miral, Biblio Cafe & Star Print",
+      logos: [
+        { id: "logo-09", name: "KYU Streetwear", image: "assets/slides/logos/logo-09.webp" },
+        { id: "logo-10", name: "SOMA'S FOOD", image: "assets/slides/logos/logo-10.webp" },
+        { id: "logo-11", name: "Al-Tablia — عالطبلية", image: "assets/slides/logos/logo-11.webp" },
+        { id: "logo-12", name: "BOOM Burger", image: "assets/slides/logos/logo-12.webp" },
+        { id: "logo-13", name: "جمعية العناية بالمساجد بمحافظة الدلم", image: "assets/slides/logos/logo-13.webp" },
+        { id: "logo-14", name: "MIRAL — ميرال", image: "assets/slides/logos/logo-14.webp" },
+        { id: "logo-15", name: "BIBLIO CAFE", image: "assets/slides/logos/logo-15.webp" },
+        { id: "logo-16", name: "STAR PRINT", image: "assets/slides/logos/logo-16.webp" }
+      ]
+    }
+  ],
+
+  /* All 6 Branding Case Study Slides — Live Editorial Layout + 4K Interactive Board */
+  brandingSlides: [
+    {
+      id: "br-01",
+      categoryLabel: "Branding — 01 / Sportswear",
+      brandName: "Unlimited",
+      title: "Unlimited — Sportswear Equipment, Footwear & Apparel",
+      logo: "assets/slides/branding/brand-logo-01.webp",
+      boardImage: "assets/slides/branding/board-01.webp",
+      image: "assets/slides/branding/board-01.webp",
+      colors: ["#082B0C", "#D4FFD6", "#055A14"],
+      description:
+        "<strong>Unlimited</strong> is a sportswear brand specializing in everything related to sports, including equipment, footwear, and apparel for both adults and children. Its visual identity reflects the vibrant colors associated with sports, energy, and movement. The logo also conveys the concept of &ldquo;Unlimited&rdquo; through a design inspired by the infinity symbol, reinforcing the brand's message of limitless possibilities and continuous motion."
+    },
+    {
+      id: "br-02",
+      categoryLabel: "Branding — 02 / Digital Marketing",
+      brandName: "Mdahh",
+      title: "MDAHH Digital Marketing — Dubai Brand Identity",
+      logo: "assets/slides/branding/brand-logo-02.webp",
+      boardImage: "assets/slides/branding/board-02.webp",
+      image: "assets/slides/branding/board-02.webp",
+      colors: ["#3E0052", "#FAEEFF", "#6C117B"],
+      description:
+        "<strong>Mdahh</strong> is a digital marketing company based in Dubai, specializing in content creation, increasing engagement, and helping brands reach their target audience. The logo is inspired by digital networks and technology, while the colors represent creativity and imagination."
+    },
+    {
+      id: "br-03",
+      categoryLabel: "Branding — 03 / Sports Organization",
+      brandName: "MYSL",
+      title: "MYSL — Canadian MYSports League Rebranding",
+      logo: "assets/slides/branding/brand-logo-03.webp",
+      boardImage: "assets/slides/branding/board-03.webp",
+      image: "assets/slides/branding/board-03.webp",
+      colors: ["#007A28", "#FFFFFF", "#111613"],
+      description:
+        "<strong>MYSL</strong> is a Canadian sports organization. It recently underwent a rebranding while retaining its original brand colors. The new logo combines the organization's name with a circular shape that symbolizes unity and connection, alongside the iconic Canadian Maple leaf and the year the organization was founded."
+    },
+    {
+      id: "br-04",
+      categoryLabel: "Branding — 04 / Food & Beverage",
+      brandName: "BOOM",
+      title: "BOOM — Burger Brand Identity (Saudi Arabia)",
+      logo: "assets/slides/branding/brand-logo-04.webp",
+      boardImage: "assets/slides/branding/board-04.webp",
+      image: "assets/slides/branding/board-04.webp",
+      colors: ["#FC4416", "#FFF5E8", "#181818"],
+      description:
+        "<strong>BOOM</strong> is a burger brand based in Saudi Arabia. The logo and brand identity were designed using bold, energetic colors that reflect excitement and vitality. The brand is primarily targeted at young adults."
+    },
+    {
+      id: "br-05",
+      categoryLabel: "Branding — 05 / Beauty & Wellness",
+      brandName: "LADANZA",
+      title: "LADANZA — Luxury Beauty Center (Dubai)",
+      logo: "assets/slides/branding/brand-logo-05.webp",
+      boardImage: "assets/slides/branding/board-05.webp",
+      image: "assets/slides/branding/board-05.webp",
+      colors: ["#FFD8E2", "#232323", "#E33769"],
+      description:
+        "<strong>LADANZA</strong> is a beauty center based in Dubai. The logo was designed to reflect beauty and elegance, while the brand identity features feminine colors that enhance its sophisticated look."
+    },
+    {
+      id: "br-06",
+      categoryLabel: "Branding — 06 / Homemade Food",
+      brandName: "SOMA'S FOOD",
+      title: "SOMA'S FOOD — Egyptian Mascot Brand Identity (Alexandria)",
+      logo: "assets/slides/branding/brand-logo-06.webp",
+      boardImage: "assets/slides/branding/board-06.webp",
+      image: "assets/slides/branding/board-06.webp",
+      colors: ["#F8FAF0", "#026937", "#F75427"],
+      description:
+        "<strong>SOMA'S FOOD</strong> is an Egyptian homemade food brand based in Alexandria. The logo was designed in a mascot style featuring the brand owner as the main character, making the brand feel more friendly, approachable, fun, and memorable for customers."
+    }
+  ],
+
+  /* Standalone 3D Architectural Showcase Slides */
+  featured3D: {
+    id: "mansnu-3d",
+    title: "3D MansNU",
+    categoryLabel: "3D Visualization — Mansoura National University",
+    image: "assets/slides/3d-mansnu.jpg"
+  },
+
+  featured3DMans: [
+    {
+      id: "mans-3d-01",
+      title: "3D MANS — الموقع العام",
+      categoryLabel: "3D MANS — Mansoura University Campus Map",
+      image: "assets/slides/3d-mans-masterplan.jpg"
+    },
+    {
+      id: "mans-3d-02",
+      title: "3D MANS — بوابة البارون",
+      categoryLabel: "3D MANS — Mansoura University Campus Map",
+      image: "assets/slides/3d-mans-baron-gate.jpg"
+    }
+  ],
+
+  /* MNU DESIGN — Real-World On-Site Campus Installations (12 Photographs across 3 Editorial Gallery Slides) */
+  mnuDesignSlides: [
+    {
+      id: "mnu-design-01",
+      setLabel: "01 — 04 / 12",
+      subtitle: "Main Campus Monument Signage & Faculty of Economics",
+      photos: [
+        {
+          id: "mnu-real-01",
+          num: "01",
+          title: "اللافتة الرئيسية للجامعة — منظور جانبي",
+          subtitle: "Main Campus Monument Sign",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-01.jpg"
+        },
+        {
+          id: "mnu-real-02",
+          num: "02",
+          title: "اللافتة الرئيسية للجامعة — واجهة أمامية",
+          subtitle: "Main Monument Front Elevation",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-02.jpg"
+        },
+        {
+          id: "mnu-real-03",
+          num: "03",
+          title: "كلية الاقتصاد والعلوم الإدارية",
+          subtitle: "Faculty of Economics & Administrative Sciences",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-03.jpg"
+        },
+        {
+          id: "mnu-real-04",
+          num: "04",
+          title: "كلية الاقتصاد والعلوم الإدارية — لقطة شاملة",
+          subtitle: "Economics Backdrop — Campus Wide View",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-04.jpg"
+        }
+      ]
+    },
+    {
+      id: "mnu-design-02",
+      setLabel: "05 — 08 / 12",
+      subtitle: "Medical, Pharmacy & Dental Faculty Installations",
+      photos: [
+        {
+          id: "mnu-real-05",
+          num: "05",
+          title: "كلية الصيدلة",
+          subtitle: "Faculty of Pharmacy",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-05.jpg"
+        },
+        {
+          id: "mnu-real-06",
+          num: "06",
+          title: "كلية الطب البشري",
+          subtitle: "Faculty of Medicine",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-06.jpg"
+        },
+        {
+          id: "mnu-real-07",
+          num: "07",
+          title: "كلية الطب البشري — لقطة جانبية",
+          subtitle: "Faculty of Medicine — Wide Angle",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-07.jpg"
+        },
+        {
+          id: "mnu-real-08",
+          num: "08",
+          title: "كلية طب الأسنان",
+          subtitle: "Faculty of Dentistry",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-08.jpg"
+        }
+      ]
+    },
+    {
+      id: "mnu-design-03",
+      setLabel: "09 — 12 / 12",
+      subtitle: "Applied Health Sciences, Physical Therapy, Arts & Nursing",
+      photos: [
+        {
+          id: "mnu-real-09",
+          num: "09",
+          title: "كلية تكنولوجيا العلوم الصحية التطبيقية",
+          subtitle: "Faculty of Applied Health Sciences Technology",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-09.jpg"
+        },
+        {
+          id: "mnu-real-10",
+          num: "10",
+          title: "كلية العلاج الطبيعي",
+          subtitle: "Faculty of Physical Therapy",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-10.jpg"
+        },
+        {
+          id: "mnu-real-11",
+          num: "11",
+          title: "كلية الآداب والعلوم الإنسانية",
+          subtitle: "Faculty of Arts & Humanities",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-11.jpg"
+        },
+        {
+          id: "mnu-real-12",
+          num: "12",
+          title: "كلية التمريض",
+          subtitle: "Faculty of Nursing",
+          categoryLabel: "MNU DESIGN — On-Site Photography",
+          image: "assets/slides/mnu-design/mnu-real-12.jpg"
+        }
+      ]
+    }
+  ]
+};
