@@ -1,12 +1,12 @@
 /* ==========================================================================
-   PORTFOLIO 2026 DATA â€” MOHAMED HAMED MOHAMED SALLAM
+   PORTFOLIO 2026 DATA Ã¢â‚¬â€ MOHAMED HAMED MOHAMED SALLAM
    Update bio, contact links, slides, or brand case studies anytime here.
    ========================================================================== */
 
 window.PORTFOLIO_DATA = {
   profile: {
     name: "Mohamed Hamed Mohamed Sallam",
-    bio: "Hello, I'm Mohamed Hamed Mohamed Sallam, a passionate Graphic Designer with over 4 years of experience in creating impactful brand identities and engaging social media designs. I believe that great design is more than just visuals â€” it's about telling a story, delivering a message, and creating a strong connection between brands and their audience. My goal is to transform ideas into meaningful visual experiences that help brands stand out and grow. I'd be happy to collaborate and bring your vision to life.",
+    bio: "Hello, I'm Mohamed Hamed Mohamed Sallam, a passionate Graphic Designer with over 4 years of experience in creating impactful brand identities and engaging social media designs. I believe that great design is more than just visuals Ã¢â‚¬â€ it's about telling a story, delivering a message, and creating a strong connection between brands and their audience. My goal is to transform ideas into meaningful visual experiences that help brands stand out and grow. I'd be happy to collaborate and bring your vision to life.",
     email: "mohamedhamedsallam14@gmail.com",
     phone: "01065401273",
     phoneHref: "tel:+201065401273",
@@ -23,24 +23,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-01",
       category: "agency",
       categoryLabel: "Agency & Digital",
-      title: "MDF â€” Graphic Design, Ads Management & Web Development",
+      title: "MDF Ã¢â‚¬â€ Graphic Design, Ads Management & Web Development",
       image: "assets/slides/social-row-01.webp",
       cards: [
         {
           id: "sm-01-1",
-          title: "MDF â€” Graphic Design & Visual Identity",
+          title: "MDF Ã¢â‚¬â€ Graphic Design & Visual Identity",
           image: "assets/slides/posts/sm-01-1.webp",
           box: { left: 10.45, top: 22.98, width: 24.8, height: 69.37 }
         },
         {
           id: "sm-01-2",
-          title: "MDF â€” Ads Management Campaign",
+          title: "MDF Ã¢â‚¬â€ Ads Management Campaign",
           image: "assets/slides/posts/sm-01-2.webp",
           box: { left: 39.36, top: 22.98, width: 24.8, height: 69.37 }
         },
         {
           id: "sm-01-3",
-          title: "MDF â€” Web Development Showcase",
+          title: "MDF Ã¢â‚¬â€ Web Development Showcase",
           image: "assets/slides/posts/sm-01-3.webp",
           box: { left: 68.26, top: 22.98, width: 24.71, height: 69.37 }
         }
@@ -50,24 +50,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-02",
       category: "agency",
       categoryLabel: "Agency & Growth",
-      title: "MDF â€” 100M+ Organic Views, Premium Quality & Zero Risk",
+      title: "MDF Ã¢â‚¬â€ 100M+ Organic Views, Premium Quality & Zero Risk",
       image: "assets/slides/social-row-02.webp",
       cards: [
         {
           id: "sm-02-1",
-          title: "MDF â€” 100M+ Organic Views Generated",
+          title: "MDF Ã¢â‚¬â€ 100M+ Organic Views Generated",
           image: "assets/slides/posts/sm-02-1.webp",
           box: { left: 9.77, top: 16.99, width: 24.9, height: 69.28 }
         },
         {
           id: "sm-02-2",
-          title: "MDF â€” Premium Quality at an Affordable Price",
+          title: "MDF Ã¢â‚¬â€ Premium Quality at an Affordable Price",
           image: "assets/slides/posts/sm-02-2.webp",
           box: { left: 38.87, top: 16.99, width: 24.9, height: 69.28 }
         },
         {
           id: "sm-02-3",
-          title: "MDF â€” Zero Risk 100% Money-Back Guarantee",
+          title: "MDF Ã¢â‚¬â€ Zero Risk 100% Money-Back Guarantee",
           image: "assets/slides/posts/sm-02-3.webp",
           box: { left: 67.87, top: 16.99, width: 24.9, height: 69.28 }
         }
@@ -77,24 +77,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-03",
       category: "agency",
       categoryLabel: "AI & Performance Marketing",
-      title: "Claude & Meta Ads â€” Arabic Performance Carousel",
+      title: "Claude & Meta Ads Ã¢â‚¬â€ Arabic Performance Carousel",
       image: "assets/slides/social-row-03.webp",
       cards: [
         {
           id: "sm-03-1",
-          title: "Claude AI â€” Copywriter & Media Buyer Assistant",
+          title: "Claude AI Ã¢â‚¬â€ Copywriter & Media Buyer Assistant",
           image: "assets/slides/posts/sm-03-1.webp",
           box: { left: 9.67, top: 12.09, width: 23.93, height: 72.75 }
         },
         {
           id: "sm-03-2",
-          title: "Claude x Meta Ads â€” Performance Integration",
+          title: "Claude x Meta Ads Ã¢â‚¬â€ Performance Integration",
           image: "assets/slides/posts/sm-03-2.webp",
           box: { left: 37.6, top: 12.09, width: 24.02, height: 72.75 }
         },
         {
           id: "sm-03-3",
-          title: "Claude AI â€” Data & Campaign Analytics",
+          title: "Claude AI Ã¢â‚¬â€ Data & Campaign Analytics",
           image: "assets/slides/posts/sm-03-3.webp",
           box: { left: 65.53, top: 12.09, width: 24.02, height: 72.75 }
         }
@@ -104,24 +104,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-04",
       category: "lifestyle",
       categoryLabel: "Menswear Fashion",
-      title: "PUNTO â€” New Branch, Eid Mubarak & We Are Hiring",
+      title: "PUNTO Ã¢â‚¬â€ New Branch, Eid Mubarak & We Are Hiring",
       image: "assets/slides/social-row-04.webp",
       cards: [
         {
           id: "sm-04-1",
-          title: "PUNTO â€” New Branch Is Coming Soon",
+          title: "PUNTO Ã¢â‚¬â€ New Branch Is Coming Soon",
           image: "assets/slides/posts/sm-04-1.webp",
           box: { left: 7.52, top: 9.15, width: 25.78, height: 75.51 }
         },
         {
           id: "sm-04-2",
-          title: "PUNTO â€” Eid Al-Fitr Mubarak Greeting",
+          title: "PUNTO Ã¢â‚¬â€ Eid Al-Fitr Mubarak Greeting",
           image: "assets/slides/posts/sm-04-2.webp",
           box: { left: 37.6, top: 9.15, width: 25.88, height: 75.51 }
         },
         {
           id: "sm-04-3",
-          title: "PUNTO â€” We Are Hiring Campaign",
+          title: "PUNTO Ã¢â‚¬â€ We Are Hiring Campaign",
           image: "assets/slides/posts/sm-04-3.webp",
           box: { left: 67.68, top: 9.15, width: 25.88, height: 75.51 }
         }
@@ -131,24 +131,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-05",
       category: "agency",
       categoryLabel: "Digital Marketing",
-      title: "MDAHH Digital Marketing â€” High Production & Brand Campaign",
+      title: "MDAHH Digital Marketing Ã¢â‚¬â€ High Production & Brand Campaign",
       image: "assets/slides/social-row-05.webp",
       cards: [
         {
           id: "sm-05-1",
-          title: "MDAHH â€” High Production Level",
+          title: "MDAHH Ã¢â‚¬â€ High Production Level",
           image: "assets/slides/posts/sm-05-1.webp",
           box: { left: 9.08, top: 10.91, width: 25.49, height: 74.09 }
         },
         {
           id: "sm-05-2",
-          title: "MDAHH â€” Cinematic Ad Production",
+          title: "MDAHH Ã¢â‚¬â€ Cinematic Ad Production",
           image: "assets/slides/posts/sm-05-2.webp",
           box: { left: 38.87, top: 10.91, width: 25.49, height: 74.09 }
         },
         {
           id: "sm-05-3",
-          title: "MDAHH â€” Strong Brand Quality",
+          title: "MDAHH Ã¢â‚¬â€ Strong Brand Quality",
           image: "assets/slides/posts/sm-05-3.webp",
           box: { left: 68.65, top: 10.91, width: 25.49, height: 74.09 }
         }
@@ -158,24 +158,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-06",
       category: "lifestyle",
       categoryLabel: "Beauty & Cosmetics",
-      title: "Berry Beauty â€” Dubai Luxury Cosmetics Campaign",
+      title: "Berry Beauty Ã¢â‚¬â€ Dubai Luxury Cosmetics Campaign",
       image: "assets/slides/social-row-06.webp",
       cards: [
         {
           id: "sm-06-1",
-          title: "Berry Beauty â€” Define Your Power, Choose Your Color",
+          title: "Berry Beauty Ã¢â‚¬â€ Define Your Power, Choose Your Color",
           image: "assets/slides/posts/sm-06-1.webp",
           box: { left: 9.38, top: 14.45, width: 25.39, height: 74.31 }
         },
         {
           id: "sm-06-2",
-          title: "Berry Beauty â€” Princess Glow & Softness",
+          title: "Berry Beauty Ã¢â‚¬â€ Princess Glow & Softness",
           image: "assets/slides/posts/sm-06-2.webp",
           box: { left: 39.06, top: 14.45, width: 25.39, height: 74.31 }
         },
         {
           id: "sm-06-3",
-          title: "Berry Beauty â€” All-Day Morning Elegance",
+          title: "Berry Beauty Ã¢â‚¬â€ All-Day Morning Elegance",
           image: "assets/slides/posts/sm-06-3.webp",
           box: { left: 68.65, top: 14.45, width: 25.39, height: 74.31 }
         }
@@ -184,25 +184,25 @@ window.PORTFOLIO_DATA = {
     {
       id: "sm-07",
       category: "business",
-      categoryLabel: "Business Setup â€” Dubai",
-      title: "Startup Scene â€” Business & Restaurant Setup in Dubai",
+      categoryLabel: "Business Setup Ã¢â‚¬â€ Dubai",
+      title: "Startup Scene Ã¢â‚¬â€ Business & Restaurant Setup in Dubai",
       image: "assets/slides/social-row-07.webp",
       cards: [
         {
           id: "sm-07-1",
-          title: "Startup Scene â€” Open Your Restaurant in Dubai",
+          title: "Startup Scene Ã¢â‚¬â€ Open Your Restaurant in Dubai",
           image: "assets/slides/posts/sm-07-1.webp",
           box: { left: 8.11, top: 7.54, width: 25.49, height: 79.32 }
         },
         {
           id: "sm-07-2",
-          title: "Startup Scene â€” Expand Your Business in Dubai from Egypt",
+          title: "Startup Scene Ã¢â‚¬â€ Expand Your Business in Dubai from Egypt",
           image: "assets/slides/posts/sm-07-2.webp",
           box: { left: 37.89, top: 7.54, width: 25.49, height: 79.32 }
         },
         {
           id: "sm-07-3",
-          title: "Startup Scene â€” Invest in Dubai, Choose Success",
+          title: "Startup Scene Ã¢â‚¬â€ Invest in Dubai, Choose Success",
           image: "assets/slides/posts/sm-07-3.webp",
           box: { left: 67.68, top: 7.54, width: 25.49, height: 79.32 }
         }
@@ -212,24 +212,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-08",
       category: "business",
       categoryLabel: "Investment & Corporate",
-      title: "KE â€” Shortcut to Global Success & Invest in Dubai",
+      title: "KE Ã¢â‚¬â€ Shortcut to Global Success & Invest in Dubai",
       image: "assets/slides/social-row-08.webp",
       cards: [
         {
           id: "sm-08-1",
-          title: "KE â€” Your Shortcut to Global Success",
+          title: "KE Ã¢â‚¬â€ Your Shortcut to Global Success",
           image: "assets/slides/posts/sm-08-1.webp",
           box: { left: 10.94, top: 13.67, width: 24.8, height: 75.78 }
         },
         {
           id: "sm-08-2",
-          title: "KE â€” Unlock Tomorrow Today",
+          title: "KE Ã¢â‚¬â€ Unlock Tomorrow Today",
           image: "assets/slides/posts/sm-08-2.webp",
           box: { left: 39.84, top: 13.67, width: 24.8, height: 75.78 }
         },
         {
           id: "sm-08-3",
-          title: "KE â€” Invest in Dubai, Invest in Growth",
+          title: "KE Ã¢â‚¬â€ Invest in Dubai, Invest in Growth",
           image: "assets/slides/posts/sm-08-3.webp",
           box: { left: 68.75, top: 13.67, width: 24.8, height: 75.78 }
         }
@@ -239,24 +239,24 @@ window.PORTFOLIO_DATA = {
       id: "sm-09",
       category: "business",
       categoryLabel: "Logistics & Delivery",
-      title: "Reach â€” 8 Years Delivery & Express Shipping Campaign",
+      title: "Reach Ã¢â‚¬â€ 8 Years Delivery & Express Shipping Campaign",
       image: "assets/slides/social-row-09.webp",
       cards: [
         {
           id: "sm-09-1",
-          title: "Reach â€” We Deliver to You Even at the Beach",
+          title: "Reach Ã¢â‚¬â€ We Deliver to You Even at the Beach",
           image: "assets/slides/posts/sm-09-1.webp",
           box: { left: 7.13, top: 11.16, width: 26.17, height: 73.09 }
         },
         {
           id: "sm-09-2",
-          title: "Reach â€” 8 Years of Shipping & Still Going Strong",
+          title: "Reach Ã¢â‚¬â€ 8 Years of Shipping & Still Going Strong",
           image: "assets/slides/posts/sm-09-2.webp",
           box: { left: 37.7, top: 11.16, width: 26.07, height: 73.09 }
         },
         {
           id: "sm-09-3",
-          title: "Reach â€” Delivering Your Shipment Under Any Circumstances",
+          title: "Reach Ã¢â‚¬â€ Delivering Your Shipment Under Any Circumstances",
           image: "assets/slides/posts/sm-09-3.webp",
           box: { left: 68.16, top: 11.16, width: 26.07, height: 73.09 }
         }
@@ -264,50 +264,50 @@ window.PORTFOLIO_DATA = {
     }
   ],
 
-  /* Both Logofolio Collections â€” Individual Marks Rendered as Live Web Cards */
+  /* Both Logofolio Collections Ã¢â‚¬â€ Individual Marks Rendered as Live Web Cards */
   logofolioSlides: [
     {
       id: "lg-01",
-      categoryLabel: "Logofolio â€” Collection 01",
-      title: "Ù„ÙˆØ¬Ùˆ Ø§Ù„Ø¬Ø§Ù…Ø¹Ø© Ø¨Ø§Ù„Ø§Ø³Ù… Ø¬Ù…Ø¨Ù‡, Ù„ÙˆØ¬Ùˆ Ø§Ù„Ø¬Ø§Ù…Ø¹Ø©, LADANZA, Eco Tree, USHB Pharmacy, MDAHH, Aseel, Natura Glow, Unlimited & MYSL",
+      categoryLabel: "Logofolio Ã¢â‚¬â€ Collection 01",
+      title: "Ã™â€žÃ™Ë†Ã˜Â¬Ã™Ë† Ã˜Â§Ã™â€žÃ˜Â¬Ã˜Â§Ã™â€¦Ã˜Â¹Ã˜Â© Ã˜Â¨Ã˜Â§Ã™â€žÃ˜Â§Ã˜Â³Ã™â€¦ Ã˜Â¬Ã™â€¦Ã˜Â¨Ã™â€¡, Ã™â€žÃ™Ë†Ã˜Â¬Ã™Ë† Ã˜Â§Ã™â€žÃ˜Â¬Ã˜Â§Ã™â€¦Ã˜Â¹Ã˜Â©, LADANZA, Eco Tree, USHB Pharmacy, MDAHH, Aseel, Natura Glow, Unlimited & MYSL",
       logos: [
-        { id: "logo-mnu-1", name: "Ù„ÙˆØ¬Ùˆ Ø§Ù„Ø¬Ø§Ù…Ø¹Ø© Ø¨Ø§Ù„Ø§Ø³Ù… Ø¬Ù…Ø¨Ù‡", image: "assets/slides/logos/mnu-logo-with-name.png" },
-        { id: "logo-mnu-2", name: "Ù„ÙˆØ¬Ùˆ Ø§Ù„Ø¬Ø§Ù…Ø¹Ø©", image: "assets/slides/logos/mnu-logo-seal.png" },
-        { id: "logo-01", name: "LADANZA Beauty Center", image: "assets/slides/logos/logo-01.png" },
-        { id: "logo-02", name: "Botanical Minimal Mark", image: "assets/slides/logos/logo-02.png" },
-        { id: "logo-03", name: "USHB Pharmacy â€” ØµÙŠØ¯Ù„ÙŠØ© Ø¹Ø´Ø¨", image: "assets/slides/logos/logo-03.png" },
-        { id: "logo-04", name: "MDAHH Digital Marketing", image: "assets/slides/logos/logo-04.png" },
-        { id: "logo-05", name: "Aseel â€” Ø£ØµÙŠÙ„", image: "assets/slides/logos/logo-05.png" },
-        { id: "logo-06", name: "NATURA GLOW", image: "assets/slides/logos/logo-06.png" },
-        { id: "logo-07", name: "Unlimited Sportswear", image: "assets/slides/logos/logo-07.png" },
-        { id: "logo-08", name: "MYSL â€” MYSports League", image: "assets/slides/logos/logo-08.png" }
+        { id: "logo-mnu-1", name: "Ã™â€žÃ™Ë†Ã˜Â¬Ã™Ë† Ã˜Â§Ã™â€žÃ˜Â¬Ã˜Â§Ã™â€¦Ã˜Â¹Ã˜Â© Ã˜Â¨Ã˜Â§Ã™â€žÃ˜Â§Ã˜Â³Ã™â€¦ Ã˜Â¬Ã™â€¦Ã˜Â¨Ã™â€¡", image: "assets/slides/logos/mnu-logo-with-name.webp" },
+        { id: "logo-mnu-2", name: "Ã™â€žÃ™Ë†Ã˜Â¬Ã™Ë† Ã˜Â§Ã™â€žÃ˜Â¬Ã˜Â§Ã™â€¦Ã˜Â¹Ã˜Â©", image: "assets/slides/logos/mnu-logo-seal.webp" },
+        { id: "logo-01", name: "LADANZA Beauty Center", image: "assets/slides/logos/logo-01.webp" },
+        { id: "logo-02", name: "Botanical Minimal Mark", image: "assets/slides/logos/logo-02.webp" },
+        { id: "logo-03", name: "USHB Pharmacy Ã¢â‚¬â€ Ã˜ÂµÃ™Å Ã˜Â¯Ã™â€žÃ™Å Ã˜Â© Ã˜Â¹Ã˜Â´Ã˜Â¨", image: "assets/slides/logos/logo-03.webp" },
+        { id: "logo-04", name: "MDAHH Digital Marketing", image: "assets/slides/logos/logo-04.webp" },
+        { id: "logo-05", name: "Aseel Ã¢â‚¬â€ Ã˜Â£Ã˜ÂµÃ™Å Ã™â€ž", image: "assets/slides/logos/logo-05.webp" },
+        { id: "logo-06", name: "NATURA GLOW", image: "assets/slides/logos/logo-06.webp" },
+        { id: "logo-07", name: "Unlimited Sportswear", image: "assets/slides/logos/logo-07.webp" },
+        { id: "logo-08", name: "MYSL Ã¢â‚¬â€ MYSports League", image: "assets/slides/logos/logo-08.webp" }
       ]
     },
     {
       id: "lg-02",
-      categoryLabel: "Logofolio â€” Collection 02",
+      categoryLabel: "Logofolio Ã¢â‚¬â€ Collection 02",
       title: "KYU, Soma's Food, Al-Tablia, BOOM, Mosques Care, Miral, Biblio Cafe & Star Print",
       logos: [
-        { id: "logo-09", name: "KYU Streetwear", image: "assets/slides/logos/logo-09.png" },
-        { id: "logo-10", name: "SOMA'S FOOD", image: "assets/slides/logos/logo-10.png" },
-        { id: "logo-11", name: "Al-Tablia â€” Ø¹Ø§Ù„Ø·Ø¨Ù„ÙŠØ©", image: "assets/slides/logos/logo-11.png" },
-        { id: "logo-12", name: "BOOM Burger", image: "assets/slides/logos/logo-12.png" },
-        { id: "logo-13", name: "Ø¬Ù…Ø¹ÙŠØ© Ø§Ù„Ø¹Ù†Ø§ÙŠØ© Ø¨Ø§Ù„Ù…Ø³Ø§Ø¬Ø¯ Ø¨Ù…Ø­Ø§ÙØ¸Ø© Ø§Ù„Ø¯Ù„Ù…", image: "assets/slides/logos/logo-13.png" },
-        { id: "logo-14", name: "MIRAL â€” Ù…ÙŠØ±Ø§Ù„", image: "assets/slides/logos/logo-14.png" },
-        { id: "logo-15", name: "BIBLIO CAFE", image: "assets/slides/logos/logo-15.png" },
-        { id: "logo-16", name: "STAR PRINT", image: "assets/slides/logos/logo-16.png" }
+        { id: "logo-09", name: "KYU Streetwear", image: "assets/slides/logos/logo-09.webp" },
+        { id: "logo-10", name: "SOMA'S FOOD", image: "assets/slides/logos/logo-10.webp" },
+        { id: "logo-11", name: "Al-Tablia Ã¢â‚¬â€ Ã˜Â¹Ã˜Â§Ã™â€žÃ˜Â·Ã˜Â¨Ã™â€žÃ™Å Ã˜Â©", image: "assets/slides/logos/logo-11.webp" },
+        { id: "logo-12", name: "BOOM Burger", image: "assets/slides/logos/logo-12.webp" },
+        { id: "logo-13", name: "Ã˜Â¬Ã™â€¦Ã˜Â¹Ã™Å Ã˜Â© Ã˜Â§Ã™â€žÃ˜Â¹Ã™â€ Ã˜Â§Ã™Å Ã˜Â© Ã˜Â¨Ã˜Â§Ã™â€žÃ™â€¦Ã˜Â³Ã˜Â§Ã˜Â¬Ã˜Â¯ Ã˜Â¨Ã™â€¦Ã˜Â­Ã˜Â§Ã™ÂÃ˜Â¸Ã˜Â© Ã˜Â§Ã™â€žÃ˜Â¯Ã™â€žÃ™â€¦", image: "assets/slides/logos/logo-13.webp" },
+        { id: "logo-14", name: "MIRAL Ã¢â‚¬â€ Ã™â€¦Ã™Å Ã˜Â±Ã˜Â§Ã™â€ž", image: "assets/slides/logos/logo-14.webp" },
+        { id: "logo-15", name: "BIBLIO CAFE", image: "assets/slides/logos/logo-15.webp" },
+        { id: "logo-16", name: "STAR PRINT", image: "assets/slides/logos/logo-16.webp" }
       ]
     }
   ],
 
-  /* All 6 Branding Case Study Slides â€” Live Editorial Layout + 4K Interactive Board */
+  /* All 6 Branding Case Study Slides Ã¢â‚¬â€ Live Editorial Layout + 4K Interactive Board */
   brandingSlides: [
     {
       id: "br-01",
-      categoryLabel: "Branding â€” 01 / Sportswear",
+      categoryLabel: "Branding Ã¢â‚¬â€ 01 / Sportswear",
       brandName: "Unlimited",
-      title: "Unlimited â€” Sportswear Equipment, Footwear & Apparel",
-      logo: "assets/slides/branding/brand-logo-01.png",
+      title: "Unlimited Ã¢â‚¬â€ Sportswear Equipment, Footwear & Apparel",
+      logo: "assets/slides/branding/brand-logo-01.webp",
       boardImage: "assets/slides/branding/board-01.webp",
       image: "assets/slides/branding/board-01.webp",
       colors: ["#082B0C", "#D4FFD6", "#055A14"],
@@ -316,10 +316,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       id: "br-02",
-      categoryLabel: "Branding â€” 02 / Digital Marketing",
+      categoryLabel: "Branding Ã¢â‚¬â€ 02 / Digital Marketing",
       brandName: "Mdahh",
-      title: "MDAHH Digital Marketing â€” Dubai Brand Identity",
-      logo: "assets/slides/branding/brand-logo-02.png",
+      title: "MDAHH Digital Marketing Ã¢â‚¬â€ Dubai Brand Identity",
+      logo: "assets/slides/branding/brand-logo-02.webp",
       boardImage: "assets/slides/branding/board-02.webp",
       image: "assets/slides/branding/board-02.webp",
       colors: ["#3E0052", "#FAEEFF", "#6C117B"],
@@ -328,10 +328,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       id: "br-03",
-      categoryLabel: "Branding â€” 03 / Sports Organization",
+      categoryLabel: "Branding Ã¢â‚¬â€ 03 / Sports Organization",
       brandName: "MYSL",
-      title: "MYSL â€” Canadian MYSports League Rebranding",
-      logo: "assets/slides/branding/brand-logo-03.png",
+      title: "MYSL Ã¢â‚¬â€ Canadian MYSports League Rebranding",
+      logo: "assets/slides/branding/brand-logo-03.webp",
       boardImage: "assets/slides/branding/board-03.webp",
       image: "assets/slides/branding/board-03.webp",
       colors: ["#007A28", "#FFFFFF", "#111613"],
@@ -340,10 +340,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       id: "br-04",
-      categoryLabel: "Branding â€” 04 / Food & Beverage",
+      categoryLabel: "Branding Ã¢â‚¬â€ 04 / Food & Beverage",
       brandName: "BOOM",
-      title: "BOOM â€” Burger Brand Identity (Saudi Arabia)",
-      logo: "assets/slides/branding/brand-logo-04.png",
+      title: "BOOM Ã¢â‚¬â€ Burger Brand Identity (Saudi Arabia)",
+      logo: "assets/slides/branding/brand-logo-04.webp",
       boardImage: "assets/slides/branding/board-04.webp",
       image: "assets/slides/branding/board-04.webp",
       colors: ["#FC4416", "#FFF5E8", "#181818"],
@@ -352,10 +352,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       id: "br-05",
-      categoryLabel: "Branding â€” 05 / Beauty & Wellness",
+      categoryLabel: "Branding Ã¢â‚¬â€ 05 / Beauty & Wellness",
       brandName: "LADANZA",
-      title: "LADANZA â€” Luxury Beauty Center (Dubai)",
-      logo: "assets/slides/branding/brand-logo-05.png",
+      title: "LADANZA Ã¢â‚¬â€ Luxury Beauty Center (Dubai)",
+      logo: "assets/slides/branding/brand-logo-05.webp",
       boardImage: "assets/slides/branding/board-05.webp",
       image: "assets/slides/branding/board-05.webp",
       colors: ["#FFD8E2", "#232323", "#E33769"],
@@ -364,10 +364,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       id: "br-06",
-      categoryLabel: "Branding â€” 06 / Homemade Food",
+      categoryLabel: "Branding Ã¢â‚¬â€ 06 / Homemade Food",
       brandName: "SOMA'S FOOD",
-      title: "SOMA'S FOOD â€” Egyptian Mascot Brand Identity (Alexandria)",
-      logo: "assets/slides/branding/brand-logo-06.png",
+      title: "SOMA'S FOOD Ã¢â‚¬â€ Egyptian Mascot Brand Identity (Alexandria)",
+      logo: "assets/slides/branding/brand-logo-06.webp",
       boardImage: "assets/slides/branding/board-06.webp",
       image: "assets/slides/branding/board-06.webp",
       colors: ["#F8FAF0", "#026937", "#F75427"],
