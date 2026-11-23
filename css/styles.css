@@ -940,14 +940,17 @@ button {
 }
 
 /* ==========================================================================
-   LIVE SOCIAL MEDIA 3-CARD CAMPAIGN SLIDES
+   LIVE SOCIAL MEDIA 3-CARD CAMPAIGN SLIDES (Per-Project Harmonized Glow)
    ========================================================================== */
 .deck-live-social-slide {
+  --slide-c1: 180, 184, 192;
+  --slide-c2: 113, 113, 122;
+  --slide-base: #050506;
   position: relative;
   background:
-    radial-gradient(ellipse 64% 68% at 72% 28%, rgba(255, 255, 255, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 58% 62% at 26% 82%, rgba(161, 161, 170, 0.14) 0%, transparent 72%),
-    var(--bg-black);
+    radial-gradient(ellipse 68% 72% at 72% 26%, rgba(var(--slide-c1), 0.34) 0%, rgba(var(--slide-c1), 0.1) 44%, transparent 72%),
+    radial-gradient(ellipse 64% 68% at 24% 82%, rgba(var(--slide-c2), 0.32) 0%, rgba(var(--slide-c2), 0.08) 46%, transparent 74%),
+    var(--slide-base);
 }
 
 .live-social-stage {
@@ -989,10 +992,10 @@ button {
   border-radius: 22px;
   overflow: hidden;
   background: var(--bg-deep);
-  border: 1.5px solid rgba(255, 255, 255, 0.24);
+  border: 1.5px solid rgba(var(--slide-c1), 0.34);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.85),
-    0 0 32px rgba(255, 255, 255, 0.06);
+    0 0 36px rgba(var(--slide-c1), 0.16);
   transition:
     transform 0.38s var(--ease-out-expo),
     border-color 0.3s ease,
@@ -1002,10 +1005,10 @@ button {
 .live-social-card:hover .live-social-card-frame,
 .live-social-card:focus-visible .live-social-card-frame {
   transform: translateY(-10px) scale(1.025);
-  border-color: rgba(255, 255, 255, 0.65);
+  border-color: rgba(var(--slide-c1), 0.82);
   box-shadow:
     0 32px 75px rgba(0, 0, 0, 0.92),
-    0 0 42px rgba(255, 255, 255, 0.16);
+    0 0 48px rgba(var(--slide-c1), 0.34);
 }
 
 .live-social-card-frame img {
@@ -1063,20 +1066,25 @@ button {
 }
 
 /* ==========================================================================
-   LIVE LOGOFOLIO 8-LOGO INTERACTIVE GRID SLIDES
+   LIVE LOGOFOLIO 8-LOGO INTERACTIVE GRID SLIDES (Per-Collection Harmonized Glow)
    ========================================================================== */
 .deck-live-logofolio-slide {
+  --slide-c1: 180, 184, 194;
+  --slide-c2: 95, 98, 108;
+  --slide-base: #060608;
   position: relative;
   background:
-    linear-gradient(135deg, #050506 0%, #111114 38%, #1c1c21 52%, #0d0d10 74%, #050506 100%);
+    radial-gradient(ellipse 68% 64% at 20% 24%, rgba(var(--slide-c1), 0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 64% 60% at 82% 80%, rgba(var(--slide-c2), 0.24) 0%, transparent 72%),
+    var(--slide-base);
 }
 
 .live-logofolio-streaks {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 24% at 48% 54%, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 18% at 62% 72%, rgba(161, 161, 170, 0.12) 0%, transparent 72%);
+    radial-gradient(ellipse 80% 24% at 48% 54%, rgba(var(--slide-c1), 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 18% at 62% 72%, rgba(var(--slide-c2), 0.16) 0%, transparent 72%);
   transform: rotate(-28deg) scale(1.25);
   pointer-events: none;
 }
@@ -1170,10 +1178,10 @@ button {
 }
 
 .live-logo-cell:hover {
-  background: rgba(39, 39, 42, 0.65);
-  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(var(--slide-c1), 0.14);
+  border-color: rgba(var(--slide-c1), 0.58);
   transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.72), 0 0 28px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.72), 0 0 32px rgba(var(--slide-c1), 0.24);
 }
 
 .live-logo-cell img {
@@ -1207,13 +1215,17 @@ button {
 }
 
 /* ==========================================================================
-   LIVE BRANDING CASE STUDY SLIDES (Left Live Story + Right 4K Bento Board)
+   LIVE BRANDING CASE STUDY SLIDES (Per-Brand Harmonized Ambient Backdrop)
    ========================================================================== */
 .deck-live-branding-slide {
+  --slide-c1: 180, 184, 194;
+  --slide-c2: 113, 113, 122;
+  --slide-base: #050506;
   position: relative;
   background:
-    radial-gradient(ellipse 55% 65% at 24% 88%, rgba(255, 255, 255, 0.14) 0%, rgba(161, 161, 170, 0.08) 52%, transparent 78%),
-    var(--bg-black);
+    radial-gradient(ellipse 62% 72% at 22% 84%, rgba(var(--slide-c1), 0.36) 0%, rgba(var(--slide-c1), 0.12) 48%, transparent 78%),
+    radial-gradient(ellipse 56% 60% at 84% 18%, rgba(var(--slide-c2), 0.26) 0%, transparent 72%),
+    var(--slide-base);
 }
 
 .live-branding-stage {
@@ -1260,7 +1272,7 @@ button {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 28px rgba(255, 255, 255, 0.12));
+  filter: drop-shadow(0 10px 28px rgba(var(--slide-c1), 0.28));
 }
 
 .live-br-story {
@@ -1313,8 +1325,8 @@ button {
 }
 
 .live-brand-swatch:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: var(--silver-bright);
+  background: rgba(var(--slide-c1), 0.22);
+  border-color: rgba(var(--slide-c1), 0.72);
   transform: translateY(-2px);
 }
 
@@ -1325,18 +1337,19 @@ button {
   border-radius: 22px;
   overflow: hidden;
   background: var(--bg-deep);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.88), 0 0 36px rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(var(--slide-c1), 0.34);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.88), 0 0 42px rgba(var(--slide-c1), 0.18);
   cursor: zoom-in;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.38s var(--ease-out-expo), border-color 0.3s ease;
+  transition: transform 0.38s var(--ease-out-expo), border-color 0.3s ease, box-shadow 0.38s var(--ease-out-expo);
 }
 
 .live-branding-right:hover {
   transform: scale(1.012);
-  border-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(var(--slide-c1), 0.8);
+  box-shadow: 0 32px 84px rgba(0, 0, 0, 0.92), 0 0 54px rgba(var(--slide-c1), 0.3);
 }
 
 .live-br-board-img {
@@ -1352,22 +1365,37 @@ button {
 }
 
 /* ==========================================================================
-   STANDALONE 3D SHOWCASE SLIDE (3D MansNU)
+   STANDALONE 3D SHOWCASE SLIDES (3D MansNU & 3D MANS — Harmonized Project Glow)
    ========================================================================== */
 .deck-live-featured-slide {
+  --slide-c1: 201, 166, 107;
+  --slide-c2: 61, 140, 64;
+  --slide-base: #0b0a06;
   position: relative;
   background:
-    radial-gradient(ellipse 62% 66% at 22% 24%, rgba(255, 255, 255, 0.12) 0%, transparent 68%),
-    radial-gradient(ellipse 58% 64% at 80% 82%, rgba(161, 161, 170, 0.14) 0%, transparent 72%),
-    var(--bg-black);
+    radial-gradient(ellipse 64% 68% at 20% 24%, rgba(var(--slide-c1), 0.3) 0%, rgba(var(--slide-c1), 0.08) 46%, transparent 72%),
+    radial-gradient(ellipse 60% 66% at 82% 82%, rgba(var(--slide-c2), 0.28) 0%, rgba(var(--slide-c2), 0.08) 46%, transparent 74%),
+    var(--slide-base);
   padding: clamp(58px, 7.5vh, 76px) clamp(20px, 4vw, 56px) clamp(24px, 3.5vh, 40px);
+}
+
+#mansnu-3d {
+  --slide-c1: 206, 174, 118;
+  --slide-c2: 58, 138, 66;
+  --slide-base: #0b0a07;
+}
+
+#mans-3d {
+  --slide-c1: 68, 142, 70;
+  --slide-c2: 217, 130, 43;
+  --slide-base: #080a06;
 }
 
 .live-featured-ambient {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 56%, rgba(255, 255, 255, 0.08) 0%, transparent 58%);
+    radial-gradient(circle at 50% 56%, rgba(var(--slide-c1), 0.14) 0%, transparent 58%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1423,10 +1451,10 @@ button {
   border-radius: 22px;
   overflow: hidden;
   background: var(--bg-deep);
-  border: 1.5px solid var(--glass-border);
+  border: 1.5px solid rgba(var(--slide-c1), 0.38);
   box-shadow:
     0 28px 80px rgba(0, 0, 0, 0.9),
-    0 0 42px rgba(255, 255, 255, 0.07);
+    0 0 46px rgba(var(--slide-c1), 0.18);
   cursor: zoom-in;
   display: flex;
   align-items: center;
@@ -1440,10 +1468,10 @@ button {
 .live-featured-frame:hover,
 .live-featured-frame:focus-visible {
   transform: translateY(-6px) scale(1.012);
-  border-color: rgba(255, 255, 255, 0.58);
+  border-color: rgba(var(--slide-c1), 0.82);
   box-shadow:
     0 36px 90px rgba(0, 0, 0, 0.95),
-    0 0 52px rgba(255, 255, 255, 0.16);
+    0 0 56px rgba(var(--slide-c1), 0.32);
   outline: none;
 }
 
@@ -1483,10 +1511,10 @@ button {
   border-radius: 22px;
   overflow: hidden;
   background: var(--bg-deep);
-  border: 1.5px solid var(--glass-border);
+  border: 1.5px solid rgba(var(--slide-c1), 0.38);
   box-shadow:
     0 26px 72px rgba(0, 0, 0, 0.9),
-    0 0 36px rgba(255, 255, 255, 0.07);
+    0 0 42px rgba(var(--slide-c1), 0.18);
   cursor: zoom-in;
   display: flex;
   align-items: center;
@@ -1500,10 +1528,10 @@ button {
 .live-featured-dual-card:hover,
 .live-featured-dual-card:focus-visible {
   transform: translateY(-8px) scale(1.018);
-  border-color: rgba(255, 255, 255, 0.58);
+  border-color: rgba(var(--slide-c2), 0.82);
   box-shadow:
     0 34px 86px rgba(0, 0, 0, 0.95),
-    0 0 48px rgba(255, 255, 255, 0.16);
+    0 0 52px rgba(var(--slide-c2), 0.3);
   outline: none;
 }
 
@@ -1525,11 +1553,14 @@ button {
 }
 
 .deck-live-mnu-design-slide {
+  --slide-c1: 26, 86, 219;
+  --slide-c2: 234, 179, 8;
+  --slide-base: #050914;
   position: relative;
   background:
-    radial-gradient(ellipse 60% 62% at 18% 20%, rgba(255, 255, 255, 0.11) 0%, transparent 66%),
-    radial-gradient(ellipse 58% 64% at 84% 84%, rgba(161, 161, 170, 0.13) 0%, transparent 70%),
-    var(--bg-black);
+    radial-gradient(ellipse 64% 66% at 18% 20%, rgba(var(--slide-c1), 0.36) 0%, rgba(var(--slide-c1), 0.1) 46%, transparent 70%),
+    radial-gradient(ellipse 60% 64% at 84% 84%, rgba(var(--slide-c2), 0.22) 0%, rgba(var(--slide-c2), 0.06) 46%, transparent 72%),
+    var(--slide-base);
   padding: clamp(56px, 7vh, 72px) clamp(20px, 3.8vw, 52px) clamp(18px, 2.8vh, 30px);
 }
 
@@ -1537,7 +1568,7 @@ button {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 54%, rgba(255, 255, 255, 0.06) 0%, transparent 62%);
+    radial-gradient(circle at 50% 54%, rgba(var(--slide-c1), 0.14) 0%, transparent 62%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1639,10 +1670,10 @@ button {
   border-radius: 18px;
   overflow: hidden;
   background: var(--bg-deep);
-  border: 1.5px solid var(--glass-border);
+  border: 1.5px solid rgba(var(--slide-c1), 0.42);
   box-shadow:
     0 20px 54px rgba(0, 0, 0, 0.85),
-    0 0 28px rgba(255, 255, 255, 0.05);
+    0 0 32px rgba(var(--slide-c1), 0.18);
   transition:
     transform 0.36s var(--ease-out-expo),
     border-color 0.28s ease,
@@ -1652,10 +1683,10 @@ button {
 .mnu-photo-card:hover .mnu-photo-media,
 .mnu-photo-card:focus-visible .mnu-photo-media {
   transform: translateY(-6px) scale(1.018);
-  border-color: rgba(255, 255, 255, 0.58);
+  border-color: rgba(var(--slide-c2), 0.8);
   box-shadow:
     0 28px 70px rgba(0, 0, 0, 0.94),
-    0 0 38px rgba(255, 255, 255, 0.14);
+    0 0 42px rgba(var(--slide-c1), 0.34);
 }
 
 .mnu-photo-card:focus-visible {

@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ------------------------------------------------------------------------
      2. LIVE CODED SLIDE RENDERERS (Social 3-Card Grids, Logofolio 8-Logo Grids, Branding Editorial Slides)
   ------------------------------------------------------------------------ */
+  function themeStyleAttr(theme) {
+    if (!theme) return "";
+    return ` style="--slide-c1:${theme.c1}; --slide-c2:${theme.c2}; --slide-base:${theme.base};"`;
+  }
+
   function renderSocialSlides() {
     const container = document.getElementById("socialSlidesContainer");
     if (!container) return;
@@ -84,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
 
         return `
-          <section class="deck-slide deck-live-social-slide" data-slide-idx="${rowIdx}">
+          <section class="deck-slide deck-live-social-slide" data-slide-idx="${rowIdx}"${themeStyleAttr(slide.theme)}>
             <div class="live-social-ambient" aria-hidden="true"></div>
             <div class="live-social-stage">
               <div class="live-social-grid">
@@ -147,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
 
         return `
-          <section class="deck-slide deck-live-logofolio-slide" data-slide-idx="${sIdx}">
+          <section class="deck-slide deck-live-logofolio-slide" data-slide-idx="${sIdx}"${themeStyleAttr(slide.theme)}>
             <div class="live-logofolio-streaks" aria-hidden="true"></div>
             <div class="live-logofolio-stage">
               <header class="live-logofolio-top">
@@ -199,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
 
         return `
-          <section class="deck-slide deck-live-branding-slide" data-slide-idx="${idx}">
+          <section class="deck-slide deck-live-branding-slide" data-slide-idx="${idx}"${themeStyleAttr(slide.theme)}>
             <div class="live-branding-ambient" aria-hidden="true"></div>
             <div class="live-branding-stage">
               <!-- Left Editorial Column (Real Typography + Transparent Brand Mark + Live Bio) -->
@@ -352,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("");
 
         return `
-          <section class="deck-slide deck-live-mnu-design-slide" data-slide-idx="${sIdx}">
+          <section class="deck-slide deck-live-mnu-design-slide" data-slide-idx="${sIdx}"${themeStyleAttr(slide.theme)}>
             <div class="live-mnu-design-ambient" aria-hidden="true"></div>
             <div class="live-mnu-design-stage">
               <header class="mnu-slide-topbar">

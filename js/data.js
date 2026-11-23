@@ -25,6 +25,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Agency & Digital",
       title: "MDF — Graphic Design, Ads Management & Web Development",
       image: "assets/slides/social-row-01.webp",
+      theme: { c1: "139, 44, 245", c2: "91, 18, 184", base: "#090412" },
       cards: [
         {
           id: "sm-01-1",
@@ -52,6 +53,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Agency & Growth",
       title: "MDF — 100M+ Organic Views, Premium Quality & Zero Risk",
       image: "assets/slides/social-row-02.webp",
+      theme: { c1: "155, 38, 232", c2: "76, 12, 143", base: "#090311" },
       cards: [
         {
           id: "sm-02-1",
@@ -79,6 +81,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "AI & Performance Marketing",
       title: "Claude & Meta Ads — Arabic Performance Carousel",
       image: "assets/slides/social-row-03.webp",
+      theme: { c1: "217, 119, 54", c2: "31, 96, 118", base: "#0b0807" },
       cards: [
         {
           id: "sm-03-1",
@@ -106,6 +109,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Menswear Fashion",
       title: "PUNTO — New Branch, Eid Mubarak & We Are Hiring",
       image: "assets/slides/social-row-04.webp",
+      theme: { c1: "180, 184, 192", c2: "90, 94, 102", base: "#08080a" },
       cards: [
         {
           id: "sm-04-1",
@@ -133,6 +137,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Digital Marketing",
       title: "MDAHH Digital Marketing — High Production & Brand Campaign",
       image: "assets/slides/social-row-05.webp",
+      theme: { c1: "168, 50, 232", c2: "94, 16, 153", base: "#0a0312" },
       cards: [
         {
           id: "sm-05-1",
@@ -160,6 +165,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Beauty & Cosmetics",
       title: "Berry Beauty — Dubai Luxury Cosmetics Campaign",
       image: "assets/slides/social-row-06.webp",
+      theme: { c1: "196, 154, 108", c2: "158, 75, 82", base: "#0e0908" },
       cards: [
         {
           id: "sm-06-1",
@@ -187,6 +193,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Business Setup — Dubai",
       title: "Startup Scene — Business & Restaurant Setup in Dubai",
       image: "assets/slides/social-row-07.webp",
+      theme: { c1: "224, 159, 62", c2: "43, 86, 128", base: "#0b0907" },
       cards: [
         {
           id: "sm-07-1",
@@ -214,6 +221,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Investment & Corporate",
       title: "KE — Shortcut to Global Success & Invest in Dubai",
       image: "assets/slides/social-row-08.webp",
+      theme: { c1: "16, 185, 129", c2: "14, 116, 144", base: "#040c0a" },
       cards: [
         {
           id: "sm-08-1",
@@ -241,6 +249,7 @@ window.PORTFOLIO_DATA = {
       categoryLabel: "Logistics & Delivery",
       title: "Reach — 8 Years Delivery & Express Shipping Campaign",
       image: "assets/slides/social-row-09.webp",
+      theme: { c1: "242, 101, 34", c2: "30, 136, 229", base: "#0c0806" },
       cards: [
         {
           id: "sm-09-1",
@@ -270,6 +279,7 @@ window.PORTFOLIO_DATA = {
       id: "lg-mnu",
       categoryLabel: "Logofolio — Mansoura National University (MNU)",
       title: "لوجوهات جامعة المنصورة الأهلية وكلياتها",
+      theme: { c1: "26, 86, 200", c2: "212, 155, 39", base: "#050a14" },
       logos: [
         { id: "mnu-01", name: "لوجو الجامعة بالاسم جمبه", image: "assets/slides/logos/mnu-logo-with-name.webp" },
         { id: "mnu-02", name: "لوجو الجامعة", image: "assets/slides/logos/mnu-logo-seal.webp" },
@@ -288,6 +298,7 @@ window.PORTFOLIO_DATA = {
       id: "lg-01",
       categoryLabel: "Logofolio — Collection 01",
       title: "LADANZA, Eco Tree, USHB Pharmacy, MDAHH, Aseel, Natura Glow, Unlimited & MYSL",
+      theme: { c1: "180, 184, 194", c2: "95, 98, 108", base: "#060608" },
       logos: [
         { id: "logo-01", name: "LADANZA Beauty Center", image: "assets/slides/logos/logo-01.webp" },
         { id: "logo-02", name: "Botanical Minimal Mark", image: "assets/slides/logos/logo-02.webp" },
@@ -303,6 +314,7 @@ window.PORTFOLIO_DATA = {
       id: "lg-02",
       categoryLabel: "Logofolio — Collection 02",
       title: "KYU, Soma's Food, Al-Tablia, BOOM, Mosques Care, Miral, Biblio Cafe & Star Print",
+      theme: { c1: "196, 196, 204", c2: "82, 82, 91", base: "#060608" },
       logos: [
         { id: "logo-09", name: "KYU Streetwear", image: "assets/slides/logos/logo-09.webp" },
         { id: "logo-10", name: "SOMA'S FOOD", image: "assets/slides/logos/logo-10.webp" },
@@ -327,6 +339,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-01.webp",
       image: "assets/slides/branding/board-01.webp",
       colors: ["#082B0C", "#D4FFD6", "#055A14"],
+      theme: { c1: "22, 163, 74", c2: "5, 90, 20", base: "#040d06" },
       description:
         "<strong>Unlimited</strong> is a sportswear brand specializing in everything related to sports, including equipment, footwear, and apparel for both adults and children. Its visual identity reflects the vibrant colors associated with sports, energy, and movement. The logo also conveys the concept of &ldquo;Unlimited&rdquo; through a design inspired by the infinity symbol, reinforcing the brand's message of limitless possibilities and continuous motion."
     },
@@ -339,6 +352,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-02.webp",
       image: "assets/slides/branding/board-02.webp",
       colors: ["#3E0052", "#FAEEFF", "#6C117B"],
+      theme: { c1: "156, 39, 176", c2: "88, 12, 118", base: "#0c0410" },
       description:
         "<strong>Mdahh</strong> is a digital marketing company based in Dubai, specializing in content creation, increasing engagement, and helping brands reach their target audience. The logo is inspired by digital networks and technology, while the colors represent creativity and imagination."
     },
@@ -351,6 +365,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-03.webp",
       image: "assets/slides/branding/board-03.webp",
       colors: ["#007A28", "#FFFFFF", "#111613"],
+      theme: { c1: "0, 148, 50", c2: "16, 92, 42", base: "#040c07" },
       description:
         "<strong>MYSL</strong> is a Canadian sports organization. It recently underwent a rebranding while retaining its original brand colors. The new logo combines the organization's name with a circular shape that symbolizes unity and connection, alongside the iconic Canadian Maple leaf and the year the organization was founded."
     },
@@ -363,6 +378,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-04.webp",
       image: "assets/slides/branding/board-04.webp",
       colors: ["#FC4416", "#FFF5E8", "#181818"],
+      theme: { c1: "252, 68, 22", c2: "194, 42, 10", base: "#120604" },
       description:
         "<strong>BOOM</strong> is a burger brand based in Saudi Arabia. The logo and brand identity were designed using bold, energetic colors that reflect excitement and vitality. The brand is primarily targeted at young adults."
     },
@@ -375,6 +391,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-05.webp",
       image: "assets/slides/branding/board-05.webp",
       colors: ["#FFD8E2", "#232323", "#E33769"],
+      theme: { c1: "227, 55, 105", c2: "244, 154, 182", base: "#110509" },
       description:
         "<strong>LADANZA</strong> is a beauty center based in Dubai. The logo was designed to reflect beauty and elegance, while the brand identity features feminine colors that enhance its sophisticated look."
     },
@@ -387,6 +404,7 @@ window.PORTFOLIO_DATA = {
       boardImage: "assets/slides/branding/board-06.webp",
       image: "assets/slides/branding/board-06.webp",
       colors: ["#F8FAF0", "#026937", "#F75427"],
+      theme: { c1: "2, 138, 72", c2: "247, 84, 39", base: "#0a0905" },
       description:
         "<strong>SOMA'S FOOD</strong> is an Egyptian homemade food brand based in Alexandria. The logo was designed in a mascot style featuring the brand owner as the main character, making the brand feel more friendly, approachable, fun, and memorable for customers."
     }
@@ -421,6 +439,7 @@ window.PORTFOLIO_DATA = {
       id: "mnu-design-01",
       setLabel: "01 — 04 / 12",
       subtitle: "Main Campus Monument Signage & Faculty of Economics",
+      theme: { c1: "26, 86, 219", c2: "234, 179, 8", base: "#050914" },
       photos: [
         {
           id: "mnu-real-01",
@@ -460,6 +479,7 @@ window.PORTFOLIO_DATA = {
       id: "mnu-design-02",
       setLabel: "05 — 08 / 12",
       subtitle: "Medical, Pharmacy & Dental Faculty Installations",
+      theme: { c1: "30, 96, 224", c2: "217, 158, 12", base: "#050a15" },
       photos: [
         {
           id: "mnu-real-05",
@@ -499,6 +519,7 @@ window.PORTFOLIO_DATA = {
       id: "mnu-design-03",
       setLabel: "09 — 12 / 12",
       subtitle: "Applied Health Sciences, Physical Therapy, Arts & Nursing",
+      theme: { c1: "22, 78, 206", c2: "238, 182, 16", base: "#050914" },
       photos: [
         {
           id: "mnu-real-09",
